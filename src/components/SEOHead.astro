@@ -1,0 +1,115 @@
+---
+import { siteConfig, generatePageMeta } from '../data/seo';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  keywords?: string[];
+  image?: string;
+  type?: 'website' | 'article';
+  noindex?: boolean;
+  structuredData?: object;
+}
+
+const {
+  title,
+  description,
+  canonical,
+  keywords = [],
+  image,
+  type = 'website',
+  noindex = false,
+  structuredData
+} = Astro.props;
+
+const meta = generatePageMeta({
+  title,
+  description,
+  canonical,
+  keywords,
+  image,
+  type
+});
+
+// Organization Schema (on all pages)
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": siteConfig.name,
+  "url": siteConfig.url,
+  "logo": `${siteConfig.url}/images/logo.png`,
+  "description": siteConfig.description,
+  "telephone": siteConfig.contactPhone,
+  "email": siteConfig.contactEmail,
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "FR"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "France"
+  },
+  "priceRange": "€€€",
+  "paymentAccepted": "Cash, Credit Card, Bank Transfer",
+  "currenciesAccepted": "EUR",
+  "openingHours": "Mo-Fr 08:00-19:00, Sa 09:00-17:00",
+  "sameAs": [
+    "https://www.facebook.com/installateurpoeleagranule",
+    "https://www.instagram.com/installateurpoeleagranule"
+  ]
+};
+---
+
+<!-- Primary Meta Tags -->
+<title>{meta.title}</title>
+<meta name="title" content={meta.title} />
+<meta name="description" content={meta.description} />
+<meta name="keywords" content={meta.keywords} />
+<meta name="author" content={siteConfig.author} />
+
+{noindex && <meta name="robots" content="noindex, nofollow" />}
+{!noindex && <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />}
+
+<!-- Canonical URL -->
+<link rel="canonical" href={meta.canonical} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={meta.og.type} />
+<meta property="og:url" content={meta.og.url} />
+<meta property="og:title" content={meta.og.title} />
+<meta property="og:description" content={meta.og.description} />
+<meta property="og:image" content={meta.og.image} />
+<meta property="og:site_name" content={meta.og.siteName} />
+<meta property="og:locale" content="fr_FR" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content={meta.twitter.card} />
+<meta property="twitter:url" content={meta.og.url} />
+<meta property="twitter:title" content={meta.twitter.title} />
+<meta property="twitter:description" content={meta.twitter.description} />
+<meta property="twitter:image" content={meta.twitter.image} />
+
+<!-- Additional SEO Meta Tags -->
+<meta name="language" content="French" />
+<meta name="revisit-after" content="7 days" />
+<meta name="distribution" content="global" />
+<meta name="rating" content="general" />
+
+<!-- Geo Tags for French targeting -->
+<meta name="geo.region" content="FR" />
+<meta name="geo.placename" content="France" />
+
+<!-- Mobile Optimization -->
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="theme-color" content="#f15a20" />
+
+<!-- Structured Data - Organization (always present) -->
+<script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+
+<!-- Structured Data - Page Specific -->
+{structuredData && (
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+)}

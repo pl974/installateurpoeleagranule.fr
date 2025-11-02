@@ -1,0 +1,545 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+import { benefits, brands, faqs } from '../data/content';
+import { siteConfig } from '../data/seo';
+import { cities } from '../data/cities';
+
+const topCities = cities.slice(0, 8);
+
+// Structured Data for Homepage
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Installation de poêle à granulé",
+  "provider": {
+    "@type": "HomeAndConstructionBusiness",
+    "name": siteConfig.name,
+    "url": siteConfig.url,
+    "telephone": siteConfig.contactPhone,
+    "email": siteConfig.contactEmail
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "France"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services d'installation de poêle à granulé",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Installation complète poêle à granulé",
+          "description": "Achat et installation professionnelle de poêle à granulé par installateur RGE"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Installation seule poêle à granulé",
+          "description": "Installation professionnelle de votre poêle à granulé déjà acheté"
+        }
+      }
+    ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "347"
+  }
+};
+---
+
+<BaseLayout
+  title="Installation Poêle à Granulé - Devis Gratuit & Aides 2024"
+  description="Installation de poêle à granulé certifiée RGE partout en France. Devis gratuit, aides financières MaPrimeRénov', et installation professionnelle en 48h. Économisez jusqu'à 60% sur vos factures de chauffage."
+  structuredData={structuredData}
+>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-accent-900 via-accent-800 to-accent-900 text-white overflow-hidden">
+    <div class="absolute inset-0 bg-[url('/images/hero-pattern.svg')] opacity-10"></div>
+    <div class="container mx-auto px-4 py-20 md:py-28 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-flex items-center space-x-2 bg-primary-500/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+            <svg class="w-5 h-5 text-primary-400" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            <span class="text-sm font-semibold text-primary-300">4.8/5 • Plus de 347 clients satisfaits</span>
+          </div>
+
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight mb-6">
+            Installation de Poêle à Granulé <span class="text-primary-400">Certifiée RGE</span>
+          </h1>
+
+          <p class="text-xl md:text-2xl text-gray-300 mb-8">
+            Économisez jusqu'à <span class="font-bold text-white">60% sur vos factures de chauffage</span> avec un poêle à granulé performant et écologique
+          </p>
+
+          <ul class="space-y-4 mb-10">
+            <li class="flex items-start space-x-3">
+              <svg class="w-6 h-6 text-green-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-lg"><strong>Devis gratuit</strong> et sans engagement en 24h</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <svg class="w-6 h-6 text-green-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-lg"><strong>Aides financières jusqu'à 3 500€</strong> (MaPrimeRénov' + Prime CEE)</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <svg class="w-6 h-6 text-green-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-lg"><strong>Installation professionnelle en 48h</strong> par techniciens RGE Qualibois</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <svg class="w-6 h-6 text-green-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-lg"><strong>Garantie satisfaction</strong> et suivi personnalisé</span>
+            </li>
+          </ul>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a
+              href="#devis"
+              class="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white px-8 py-4 rounded-lg font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
+            >
+              <span>Obtenir mon devis gratuit</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </a>
+            <a
+              href="tel:+33123456789"
+              class="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-lg font-bold text-lg border-2 border-white/30 hover:border-white/50 transition-all duration-300 flex items-center justify-center space-x-2"
+            >
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              <span>01 23 45 67 89</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hidden lg:block">
+          <div class="relative">
+            <div class="absolute -top-4 -left-4 w-72 h-72 bg-primary-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+            <div class="absolute -bottom-8 right-4 w-72 h-72 bg-accent-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+            <div class="relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 shadow-2xl">
+              <div class="text-center mb-6">
+                <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full mb-4">
+                  <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">Économies moyennes</h3>
+                <p class="text-5xl font-display font-bold text-primary-400 mb-1">60%</p>
+                <p class="text-gray-300">sur vos factures de chauffage</p>
+              </div>
+              <div class="grid grid-cols-2 gap-4 pt-6 border-t border-white/20">
+                <div class="text-center">
+                  <p class="text-3xl font-bold text-white mb-1">347+</p>
+                  <p class="text-sm text-gray-300">Installations réalisées</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-3xl font-bold text-white mb-1">48h</p>
+                  <p class="text-sm text-gray-300">Installation rapide</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wave separator -->
+    <div class="absolute bottom-0 left-0 right-0">
+      <svg class="w-full h-12 md:h-16 fill-gray-50" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Trust Badges -->
+  <section class="py-8 bg-white border-b border-gray-100">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+        <div class="flex items-center space-x-2">
+          <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+          </svg>
+          <span class="font-semibold text-gray-700">Certifié RGE Qualibois</span>
+        </div>
+        <div class="flex items-center space-x-2">
+          <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
+          </svg>
+          <span class="font-semibold text-gray-700">Label Flamme Verte</span>
+        </div>
+        <div class="flex items-center space-x-2">
+          <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+          </svg>
+          <span class="font-semibold text-gray-700">Garantie 2 ans</span>
+        </div>
+        <div class="flex items-center space-x-2">
+          <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span class="font-semibold text-gray-700">Aides jusqu'à 3 500€</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section id="avantages" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">
+          Pourquoi choisir un poêle à granulé ?
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Le poêle à granulé est la solution de chauffage la plus économique et écologique du marché
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {benefits.map(benefit => (
+          <div class="bg-white rounded-xl p-8 shadow-soft hover:shadow-soft-lg transition-shadow duration-300">
+            <div class="text-5xl mb-4">{benefit.icon}</div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
+            <p class="text-gray-600 mb-4">{benefit.description}</p>
+            {benefit.stat && (
+              <div class="inline-flex items-center space-x-2 bg-primary-50 text-primary-700 px-4 py-2 rounded-lg font-semibold">
+                <span>{benefit.stat}</span>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">
+          Comment ça marche ?
+        </h2>
+        <p class="text-xl text-gray-600">
+          De votre demande à l'installation, un processus simple et rapide
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="relative">
+          <div class="text-center">
+            <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full mb-6 text-white text-2xl font-bold">
+              1
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Demande de devis</h3>
+            <p class="text-gray-600">
+              Remplissez le formulaire en 2 minutes avec vos besoins et votre localisation
+            </p>
+          </div>
+          <div class="hidden md:block absolute top-10 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-primary-500 to-transparent"></div>
+        </div>
+
+        <div class="relative">
+          <div class="text-center">
+            <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full mb-6 text-white text-2xl font-bold">
+              2
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Étude personnalisée</h3>
+            <p class="text-gray-600">
+              Un conseiller expert analyse votre projet et vous propose les meilleures solutions
+            </p>
+          </div>
+          <div class="hidden md:block absolute top-10 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-primary-500 to-transparent"></div>
+        </div>
+
+        <div class="relative">
+          <div class="text-center">
+            <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full mb-6 text-white text-2xl font-bold">
+              3
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Devis détaillé</h3>
+            <p class="text-gray-600">
+              Recevez jusqu'à 3 devis comparatifs avec détail des aides financières applicables
+            </p>
+          </div>
+          <div class="hidden md:block absolute top-10 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-primary-500 to-transparent"></div>
+        </div>
+
+        <div class="text-center">
+          <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full mb-6 text-white text-2xl font-bold">
+            4
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Installation pro</h3>
+          <p class="text-gray-600">
+            Nos techniciens RGE installent votre poêle en 48h avec garantie et formation incluse
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form -->
+  <QuoteForm />
+
+  <!-- Brands Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">
+          Les meilleures marques de poêles à granulé
+        </h2>
+        <p class="text-xl text-gray-600">
+          Nous installons uniquement des marques réputées pour leur qualité et leur fiabilité
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        {brands.slice(0, 6).map(brand => (
+          <div class="bg-gray-50 rounded-xl p-6 hover:shadow-soft-lg transition-all duration-300 border border-gray-200">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-2xl font-bold text-gray-900">{brand.name}</h3>
+              <div class="flex items-center space-x-1 bg-yellow-50 px-3 py-1 rounded-full">
+                <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <span class="text-sm font-semibold text-yellow-700">{brand.rating}</span>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-4 text-sm">{brand.description}</p>
+            <div class="space-y-2 mb-4">
+              <div class="flex items-center justify-between text-sm">
+                <span class="text-gray-500">Prix :</span>
+                <span class="font-semibold text-gray-900">{brand.priceRange}</span>
+              </div>
+              <div class="flex items-center justify-between text-sm">
+                <span class="text-gray-500">Garantie :</span>
+                <span class="font-semibold text-gray-900">{brand.warranty}</span>
+              </div>
+              <div class="flex items-center justify-between text-sm">
+                <span class="text-gray-500">Origine :</span>
+                <span class="font-semibold text-gray-900">{brand.madeTo}</span>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-gray-200">
+              <p class="text-xs text-gray-500 mb-2">Points forts :</p>
+              <div class="flex flex-wrap gap-2">
+                {brand.specialFeatures.slice(0, 2).map(feature => (
+                  <span class="inline-flex items-center text-xs bg-primary-50 text-primary-700 px-2 py-1 rounded">
+                    {feature}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="text-center">
+        <a
+          href="/marques"
+          class="inline-flex items-center space-x-2 bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+        >
+          <span>Voir toutes les marques</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cities Section -->
+  <section class="py-20 bg-gradient-to-br from-accent-50 to-primary-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">
+          Installation de poêle à granulé dans toute la France
+        </h2>
+        <p class="text-xl text-gray-600">
+          Nos installateurs certifiés RGE interviennent dans les principales villes françaises
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+        {topCities.map(city => (
+          <a
+            href={`/ville/${city.slug}`}
+            class="bg-white rounded-lg p-6 text-center hover:shadow-soft-lg transition-all duration-300 transform hover:scale-105 border border-gray-100"
+          >
+            <div class="text-3xl mb-2">📍</div>
+            <h3 class="font-bold text-gray-900 mb-1">{city.name}</h3>
+            <p class="text-sm text-gray-600">{city.department}</p>
+          </a>
+        ))}
+      </div>
+
+      <div class="text-center">
+        <p class="text-gray-600 mb-4">
+          Et dans plus de 100 autres villes en France
+        </p>
+        <a
+          href="#devis"
+          class="inline-flex items-center space-x-2 bg-white hover:bg-gray-50 text-primary-600 px-8 py-3 rounded-lg font-semibold border-2 border-primary-600 transition-colors"
+        >
+          <span>Vérifier ma ville</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">
+            Questions fréquentes sur les poêles à granulé
+          </h2>
+          <p class="text-xl text-gray-600">
+            Tout ce que vous devez savoir avant d'installer votre poêle à granulé
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          {faqs.map((faq, index) => (
+            <div class="border border-gray-200 rounded-lg overflow-hidden">
+              <button
+                class="faq-question w-full text-left px-6 py-5 bg-gray-50 hover:bg-gray-100 transition-colors flex items-center justify-between"
+                data-index={index}
+              >
+                <span class="font-semibold text-gray-900 pr-8">{faq.question}</span>
+                <svg class="w-5 h-5 text-primary-600 flex-shrink-0 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="faq-answer hidden px-6 py-5 bg-white">
+                <p class="text-gray-600">{faq.answer}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-20 bg-gradient-to-br from-accent-900 to-accent-800 text-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-display font-bold mb-6">
+          Prêt à économiser jusqu'à 60% sur vos factures de chauffage ?
+        </h2>
+        <p class="text-xl text-gray-300 mb-10">
+          Obtenez votre devis gratuit et découvrez combien vous pouvez économiser avec un poêle à granulé
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="#devis"
+            class="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white px-10 py-4 rounded-lg font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
+          >
+            <span>Demander mon devis gratuit</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+          <a
+            href="tel:+33123456789"
+            class="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-10 py-4 rounded-lg font-bold text-lg border-2 border-white/30 hover:border-white/50 transition-all duration-300 flex items-center justify-center space-x-2"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            <span>Appelez-nous : 01 23 45 67 89</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  // FAQ Accordion
+  document.addEventListener('DOMContentLoaded', () => {
+    const faqButtons = document.querySelectorAll('.faq-question');
+
+    faqButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const answer = button.nextElementSibling;
+        const icon = button.querySelector('svg');
+        const isOpen = !answer?.classList.contains('hidden');
+
+        // Close all other FAQs
+        document.querySelectorAll('.faq-answer').forEach(a => a.classList.add('hidden'));
+        document.querySelectorAll('.faq-question svg').forEach(i => i.classList.remove('rotate-180'));
+
+        // Toggle current FAQ
+        if (!isOpen) {
+          answer?.classList.remove('hidden');
+          icon?.classList.add('rotate-180');
+        }
+      });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href && href !== '#') {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        }
+      });
+    });
+  });
+
+  // Blob animation
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes blob {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      33% { transform: translate(30px, -50px) scale(1.1); }
+      66% { transform: translate(-20px, 20px) scale(0.9); }
+    }
+    .animate-blob {
+      animation: blob 7s infinite;
+    }
+    .animation-delay-2000 {
+      animation-delay: 2s;
+    }
+  `;
+  document.head.appendChild(style);
+</script>
+
+<style>
+  .transform {
+    transition-property: transform;
+  }
+  .rotate-180 {
+    transform: rotate(180deg);
+  }
+</style>

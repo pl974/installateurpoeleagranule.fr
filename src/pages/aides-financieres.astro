@@ -1,0 +1,205 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+import { financingOptions } from '../data/content';
+---
+
+<BaseLayout
+  title="Aides Financières Poêle à Granulé 2024 - MaPrimeRénov', CEE"
+  description="Guide complet des aides financières 2024 pour l'installation d'un poêle à granulé : MaPrimeRénov' (jusqu'à 2 500€), Prime CEE, Éco-PTZ, TVA 5,5%. Conditions et démarches."
+  keywords={['MaPrimeRénov poêle granulé', 'aides poêle granulé 2024', 'prime CEE', 'éco-PTZ', 'financement poêle pellets']}
+>
+  <section class="py-20 bg-gradient-to-br from-green-50 to-blue-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-16">
+          <div class="inline-flex items-center space-x-2 bg-green-100 text-green-800 px-4 py-2 rounded-full mb-6">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span class="font-semibold">Aides 2024 disponibles</span>
+          </div>
+          <h1 class="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-6">
+            Aides Financières pour l'Installation d'un Poêle à Granulé
+          </h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Profitez des aides cumulables pour réduire de 40 à 60% le coût de votre installation
+          </p>
+        </div>
+
+        <div class="bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-2xl p-8 mb-12">
+          <h2 class="text-2xl font-bold mb-4">💰 Total des aides disponibles</h2>
+          <p class="text-4xl font-bold mb-2">Jusqu'à 3 500€</p>
+          <p class="text-primary-100">En cumulant MaPrimeRénov' + Prime CEE + TVA réduite</p>
+        </div>
+
+        <div class="space-y-6 mb-16">
+          {financingOptions.map(option => (
+            <div class="bg-white rounded-2xl shadow-soft-lg overflow-hidden">
+              <div class="p-8">
+                <div class="flex items-start justify-between mb-6">
+                  <div class="flex items-start space-x-4">
+                    <div class="text-5xl">{option.icon}</div>
+                    <div>
+                      <h3 class="text-2xl font-bold text-gray-900 mb-2">{option.name}</h3>
+                      <p class="text-gray-600">{option.description}</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary-50 px-6 py-3 rounded-lg">
+                    <p class="text-2xl font-bold text-primary-600">{option.amount}</p>
+                  </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div class="bg-gray-50 rounded-lg p-6">
+                    <h4 class="font-semibold text-gray-900 mb-3 flex items-center">
+                      <svg class="w-5 h-5 text-primary-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                      </svg>
+                      Conditions
+                    </h4>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                      {option.conditions.map(condition => (
+                        <li class="flex items-start space-x-2">
+                          <svg class="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                          </svg>
+                          <span>{condition}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div class="bg-blue-50 rounded-lg p-6">
+                    <h4 class="font-semibold text-gray-900 mb-3 flex items-center">
+                      <svg class="w-5 h-5 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                      </svg>
+                      Éligibilité
+                    </h4>
+                    <p class="text-sm text-gray-700">{option.eligibility}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-soft-lg p-8 mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Exemple de financement complet</h2>
+          <div class="space-y-4">
+            <div class="flex items-center justify-between py-4 border-b border-gray-200">
+              <span class="text-gray-700 font-medium">Prix total installation (poêle + pose)</span>
+              <span class="text-xl font-bold text-gray-900">6 500€</span>
+            </div>
+            <div class="flex items-center justify-between py-3 text-green-700">
+              <span class="flex items-center">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                MaPrimeRénov' (ménage modeste)
+              </span>
+              <span class="font-bold">- 2 000€</span>
+            </div>
+            <div class="flex items-center justify-between py-3 text-green-700">
+              <span class="flex items-center">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Prime CEE
+              </span>
+              <span class="font-bold">- 800€</span>
+            </div>
+            <div class="flex items-center justify-between py-3 text-green-700">
+              <span class="flex items-center">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                TVA réduite 5,5% (économie)
+              </span>
+              <span class="font-bold">- 500€</span>
+            </div>
+            <div class="flex items-center justify-between py-4 border-t-2 border-primary-200 bg-primary-50 px-4 rounded-lg mt-4">
+              <span class="text-lg font-bold text-primary-900">Reste à charge</span>
+              <span class="text-3xl font-bold text-primary-600">3 200€</span>
+            </div>
+            <div class="text-center text-sm text-gray-600 mt-4">
+              Soit une réduction de <strong class="text-green-600">50% du prix total</strong> grâce aux aides !
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-12">
+          <div class="flex items-start">
+            <svg class="w-6 h-6 text-yellow-600 flex-shrink-0 mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+            </svg>
+            <div>
+              <h3 class="text-lg font-bold text-yellow-900 mb-2">⚠️ Condition obligatoire pour bénéficier des aides</h3>
+              <p class="text-yellow-800">
+                Pour être éligible à MaPrimeRénov', la Prime CEE et la TVA réduite, l'installation de votre poêle à granulé <strong>doit obligatoirement être réalisée par un professionnel certifié RGE Qualibois</strong>. Nos installateurs sont tous certifiés RGE, vous garantissant ainsi l'accès à toutes les aides disponibles.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-soft-lg p-8">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Comment obtenir vos aides ?</h2>
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-10 h-10 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold">
+                1
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-900 mb-2">Demandez votre devis</h3>
+                <p class="text-gray-600">Contactez-nous pour obtenir un devis détaillé de votre projet d'installation.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-10 h-10 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold">
+                2
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-900 mb-2">Vérification de votre éligibilité</h3>
+                <p class="text-gray-600">Nos conseillers étudient votre situation et calculent le montant exact des aides auxquelles vous avez droit.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-10 h-10 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold">
+                3
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-900 mb-2">Constitution du dossier</h3>
+                <p class="text-gray-600">Nous vous accompagnons dans la constitution et le dépôt de votre dossier MaPrimeRénov' et Prime CEE.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-10 h-10 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold">
+                4
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-900 mb-2">Installation par nos équipes RGE</h3>
+                <p class="text-gray-600">Une fois les aides validées, nos techniciens certifiés RGE réalisent l'installation de votre poêle à granulé.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-10 h-10 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold">
+                5
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-900 mb-2">Versement des aides</h3>
+                <p class="text-gray-600">Les aides sont versées directement sur votre compte bancaire après validation des travaux.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <QuoteForm />
+</BaseLayout>

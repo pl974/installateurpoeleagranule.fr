@@ -1,0 +1,21 @@
+# robots.txt pour installateurpoeleagranule.fr
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://installateurpoeleagranule.fr/sitemap-index.xml
+
+# Optimisation pour les moteurs de recherche
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Fichiers à ne pas indexer
+Disallow: /api/
+Disallow: /_astro/

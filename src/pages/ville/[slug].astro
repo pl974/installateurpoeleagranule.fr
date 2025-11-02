@@ -1,0 +1,416 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import QuoteForm from '../../components/QuoteForm.astro';
+import { cities, getCityBySlug, type City } from '../../data/cities';
+import { benefits, brands, faqs } from '../../data/content';
+import { siteConfig } from '../../data/seo';
+
+export async function getStaticPaths() {
+  return cities.map(city => ({
+    params: { slug: city.slug },
+    props: { city }
+  }));
+}
+
+interface Props {
+  city: City;
+}
+
+const { city } = Astro.props;
+
+// Structured Data for City Page
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": `Installation de poêle à granulé à ${city.name}`,
+  "provider": {
+    "@type": "HomeAndConstructionBusiness",
+    "name": siteConfig.name,
+    "url": siteConfig.url,
+    "telephone": siteConfig.contactPhone,
+    "email": siteConfig.contactEmail
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": city.name,
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": city.region,
+      "addressCountry": "FR"
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "347"
+  }
+};
+
+const metaDescription = `Installation de poêle à granulé à ${city.name} (${city.department}) par installateur RGE certifié. Devis gratuit, aides MaPrimeRénov' jusqu'à 2 500€. Installation professionnelle en 48h. ☎️ 01 23 45 67 89`;
+
+const localKeywords = [
+  `installateur poêle à granulé ${city.name}`,
+  `installation poêle granulé ${city.name}`,
+  `poêle à granulé ${city.name}`,
+  `installateur RGE ${city.name}`,
+  `chauffage granulés ${city.name}`,
+  `devis poêle granulé ${city.name}`
+];
+---
+
+<BaseLayout
+  title={`Installateur Poêle à Granulé ${city.name} (${city.department}) - Devis Gratuit 2024`}
+  description={metaDescription}
+  canonical={`${siteConfig.url}/ville/${city.slug}`}
+  keywords={localKeywords}
+  structuredData={structuredData}
+>
+  <!-- Hero Section - Local -->
+  <section class="relative bg-gradient-to-br from-accent-900 via-accent-800 to-accent-900 text-white overflow-hidden">
+    <div class="absolute inset-0 bg-[url('/images/hero-pattern.svg')] opacity-10"></div>
+    <div class="container mx-auto px-4 py-20 md:py-24 relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center space-x-2 bg-primary-500/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+          <svg class="w-5 h-5 text-primary-400" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+          </svg>
+          <span class="text-sm font-semibold text-primary-300">{city.name} • {city.region}</span>
+        </div>
+
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight mb-6">
+          Installateur Poêle à Granulé à <span class="text-primary-400">{city.name}</span>
+        </h1>
+
+        <p class="text-xl md:text-2xl text-gray-300 mb-8">
+          Installation certifiée RGE dans tout le département {city.department}. <br class="hidden md:block" />
+          Économisez jusqu'à <span class="font-bold text-white">60% sur vos factures de chauffage</span>
+        </p>
+
+        <ul class="space-y-3 mb-10 text-left max-w-2xl mx-auto">
+          <li class="flex items-start space-x-3">
+            <svg class="w-6 h-6 text-green-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-lg">Installateurs RGE Qualibois certifiés à {city.name}</span>
+          </li>
+          <li class="flex items-start space-x-3">
+            <svg class="w-6 h-6 text-green-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-lg">Aides financières MaPrimeRénov' jusqu'à 2 500€ pour les habitants de {city.name}</span>
+          </li>
+          <li class="flex items-start space-x-3">
+            <svg class="w-6 h-6 text-green-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-lg">Installation rapide en 48h partout à {city.name} et alentours</span>
+          </li>
+          <li class="flex items-start space-x-3">
+            <svg class="w-6 h-6 text-green-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-lg">Devis gratuit et sans engagement sous 24h</span>
+          </li>
+        </ul>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="#devis"
+            class="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white px-8 py-4 rounded-lg font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
+          >
+            <span>Devis gratuit à {city.name}</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+          <a
+            href="tel:+33123456789"
+            class="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-lg font-bold text-lg border-2 border-white/30 hover:border-white/50 transition-all duration-300 flex items-center justify-center space-x-2"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            <span>01 23 45 67 89</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wave separator -->
+    <div class="absolute bottom-0 left-0 right-0">
+      <svg class="w-full h-12 md:h-16 fill-gray-50" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Local Stats -->
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <p class="text-4xl font-bold text-primary-600 mb-2">150+</p>
+          <p class="text-gray-600">Installations à {city.name}</p>
+        </div>
+        <div>
+          <p class="text-4xl font-bold text-primary-600 mb-2">4.8/5</p>
+          <p class="text-gray-600">Note moyenne clients</p>
+        </div>
+        <div>
+          <p class="text-4xl font-bold text-primary-600 mb-2">48h</p>
+          <p class="text-gray-600">Délai d'installation</p>
+        </div>
+        <div>
+          <p class="text-4xl font-bold text-primary-600 mb-2">2 500€</p>
+          <p class="text-gray-600">Aides disponibles</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Local Content -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-8">
+          Pourquoi installer un poêle à granulé à {city.name} ?
+        </h2>
+
+        <div class="prose prose-lg max-w-none text-gray-700 space-y-6">
+          <p>
+            <strong>À {city.name} ({city.department})</strong>, de plus en plus de foyers choisissent le <strong>poêle à granulé</strong> comme solution de chauffage principale. {city.description}. Cette tendance s'explique par de nombreux avantages économiques et écologiques.
+          </p>
+
+          <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Les avantages d'un poêle à granulé à {city.name}</h3>
+
+          <p>
+            Dans la région <strong>{city.region}</strong>, le climat rend le chauffage indispensable pendant plusieurs mois de l'année. Le poêle à granulé est la solution idéale pour :
+          </p>
+
+          <ul class="list-none space-y-3">
+            <li class="flex items-start space-x-3">
+              <svg class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span><strong>Réduire vos factures de chauffage de 40 à 60%</strong> par rapport au fioul, au gaz ou à l'électricité</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <svg class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span><strong>Chauffer efficacement votre logement</strong> avec un rendement de 87 à 95%</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <svg class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span><strong>Bénéficier d'un chauffage écologique</strong> avec une énergie renouvelable et neutre en CO2</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <svg class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span><strong>Profiter d'un confort optimal</strong> grâce à la programmation et au thermostat automatique</span>
+            </li>
+          </ul>
+
+          <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Prix d'installation d'un poêle à granulé à {city.name}</h3>
+
+          <p>
+            Le <strong>prix d'installation d'un poêle à granulé à {city.name}</strong> varie généralement entre <strong>4 000€ et 10 000€</strong> selon le modèle choisi, la configuration de votre logement et les travaux nécessaires. Ce prix comprend :
+          </p>
+
+          <ul class="list-disc pl-6 space-y-2">
+            <li>L'achat du poêle à granulé : 2 000€ à 7 000€</li>
+            <li>La main d'œuvre et l'installation RGE : 1 500€ à 3 000€</li>
+            <li>Le tubage du conduit si nécessaire : 500€ à 1 500€</li>
+            <li>La mise en service et la formation : inclus</li>
+          </ul>
+
+          <p>
+            Cependant, grâce aux <strong>aides financières 2024</strong>, le reste à charge peut être réduit de <strong>40 à 60%</strong> :
+          </p>
+
+          <div class="bg-primary-50 border-l-4 border-primary-600 p-6 my-6">
+            <h4 class="font-bold text-gray-900 mb-3">Exemple de financement à {city.name} :</h4>
+            <ul class="space-y-2 text-sm">
+              <li>• Prix total installation : <strong>6 500€</strong></li>
+              <li>• MaPrimeRénov' : <strong>- 2 000€</strong></li>
+              <li>• Prime CEE : <strong>- 800€</strong></li>
+              <li>• TVA réduite 5,5% : <strong>- 500€</strong></li>
+              <li class="pt-2 border-t border-primary-200">• <strong>Reste à charge : 3 200€</strong></li>
+            </ul>
+          </div>
+
+          <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Les aides financières disponibles à {city.name}</h3>
+
+          <p>
+            Les habitants de <strong>{city.name}</strong> et de tout le département <strong>{city.department}</strong> peuvent bénéficier de plusieurs aides cumulables pour financer leur installation de poêle à granulé :
+          </p>
+
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong>MaPrimeRénov'</strong> : jusqu'à 2 500€ selon vos revenus</li>
+            <li><strong>Prime CEE (Certificats d'Économies d'Énergie)</strong> : 500€ à 1 000€</li>
+            <li><strong>Éco-PTZ</strong> : prêt à taux zéro jusqu'à 15 000€</li>
+            <li><strong>TVA réduite à 5,5%</strong> au lieu de 20%</li>
+            <li><strong>Aides locales</strong> : certaines communes de la région {city.region} proposent des subventions complémentaires</li>
+          </ul>
+
+          <p class="bg-yellow-50 border-l-4 border-yellow-500 p-4">
+            ⚠️ <strong>Condition obligatoire</strong> : Pour bénéficier de ces aides à {city.name}, l'installation doit être réalisée par un <strong>professionnel RGE Qualibois</strong> comme nos équipes.
+          </p>
+
+          <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Nos zones d'intervention autour de {city.name}</h3>
+
+          <p>
+            Nos installateurs certifiés RGE interviennent à {city.name} et dans toutes les communes environnantes :
+          </p>
+
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-3 my-6">
+            {city.nearbyAreas.map(area => (
+              <div class="bg-white border border-gray-200 rounded-lg px-4 py-3 text-sm font-medium text-gray-700">
+                📍 {area}
+              </div>
+            ))}
+          </div>
+
+          <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Comment choisir son poêle à granulé à {city.name} ?</h3>
+
+          <p>
+            Le choix de votre poêle à granulé doit prendre en compte plusieurs critères adaptés à votre logement à {city.name} :
+          </p>
+
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong>La puissance</strong> : environ 1 kW pour 10 m² (maison bien isolée RT2012) ou 1 kW pour 7-8 m² (isolation moyenne)</li>
+            <li><strong>Le type de poêle</strong> : étanche ou non étanche (obligatoire en RT2012), canalisable pour distribuer la chaleur dans plusieurs pièces</li>
+            <li><strong>La marque</strong> : privilégiez des marques reconnues comme Rika, MCZ, Palazzetti, Extraflame, Invicta</li>
+            <li><strong>Les fonctionnalités</strong> : programmation, thermostat, connexion Wi-Fi, nettoyage automatique</li>
+            <li><strong>Le design</strong> : large choix de styles (moderne, traditionnel, design) et de couleurs</li>
+          </ul>
+
+          <p>
+            Nos conseillers experts vous accompagnent gratuitement pour choisir le poêle à granulé le plus adapté à votre projet à {city.name}.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form -->
+  <QuoteForm cityName={city.name} />
+
+  <!-- Benefits -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-12 text-center">
+        Pourquoi nous choisir à {city.name} ?
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center p-6">
+          <div class="inline-flex items-center justify-center w-16 h-16 bg-primary-100 rounded-full mb-4">
+            <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Certification RGE Qualibois</h3>
+          <p class="text-gray-600">Installateurs certifiés pour garantir vos aides financières</p>
+        </div>
+
+        <div class="text-center p-6">
+          <div class="inline-flex items-center justify-center w-16 h-16 bg-primary-100 rounded-full mb-4">
+            <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Installation rapide</h3>
+          <p class="text-gray-600">Intervention sous 48h partout à {city.name}</p>
+        </div>
+
+        <div class="text-center p-6">
+          <div class="inline-flex items-center justify-center w-16 h-16 bg-primary-100 rounded-full mb-4">
+            <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Satisfaction garantie</h3>
+          <p class="text-gray-600">Plus de 150 clients satisfaits à {city.name}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Local -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-12 text-center">
+          Questions fréquentes à {city.name}
+        </h2>
+
+        <div class="space-y-4">
+          <div class="bg-white rounded-lg p-6 border border-gray-200">
+            <h3 class="font-bold text-gray-900 mb-2">
+              Quel est le prix d'un poêle à granulé à {city.name} ?
+            </h3>
+            <p class="text-gray-600">
+              À {city.name}, le prix total d'installation d'un poêle à granulé varie entre 4 000€ et 10 000€. Avec les aides MaPrimeRénov' et la Prime CEE, le reste à charge est généralement compris entre 2 500€ et 6 000€.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 border border-gray-200">
+            <h3 class="font-bold text-gray-900 mb-2">
+              Quelles aides pour un poêle à granulé à {city.name} ?
+            </h3>
+            <p class="text-gray-600">
+              Les habitants de {city.name} peuvent bénéficier de MaPrimeRénov' (jusqu'à 2 500€), la Prime CEE (500-1 000€), l'Éco-PTZ, et la TVA réduite à 5,5%. L'installation doit être réalisée par un professionnel RGE comme nos équipes.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 border border-gray-200">
+            <h3 class="font-bold text-gray-900 mb-2">
+              Combien de temps dure l'installation à {city.name} ?
+            </h3>
+            <p class="text-gray-600">
+              L'installation complète d'un poêle à granulé prend 1 à 2 jours selon la configuration de votre logement à {city.name}. Nous intervenons rapidement, généralement sous 48h après validation du devis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-20 bg-gradient-to-br from-primary-600 to-primary-700 text-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-display font-bold mb-6">
+          Prêt à installer votre poêle à granulé à {city.name} ?
+        </h2>
+        <p class="text-xl mb-10">
+          Obtenez votre devis gratuit et personnalisé sous 24h
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="#devis"
+            class="bg-white hover:bg-gray-100 text-primary-600 px-10 py-4 rounded-lg font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center space-x-2"
+          >
+            <span>Demander un devis</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+          <a
+            href="tel:+33123456789"
+            class="bg-primary-800 hover:bg-primary-900 text-white px-10 py-4 rounded-lg font-bold text-lg border-2 border-white/30 hover:border-white/50 transition-all duration-300 flex items-center justify-center space-x-2"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            <span>01 23 45 67 89</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
