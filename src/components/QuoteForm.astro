@@ -38,7 +38,21 @@ const { cityName } = Astro.props;
         </div>
       </div>
 
-      <form id="quote-form" class="bg-white rounded-2xl shadow-soft-lg p-8">
+      <form
+        id="quote-form"
+        name="devis"
+        method="POST"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        class="bg-white rounded-2xl shadow-soft-lg p-8"
+      >
+        <!-- Honeypot anti-spam (caché) -->
+        <p class="hidden">
+          <label>
+            Ne pas remplir si vous êtes humain : <input name="bot-field" />
+          </label>
+        </p>
+
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <!-- Projet -->
           <div class="md:col-span-2">
@@ -294,24 +308,16 @@ const { cityName } = Astro.props;
 <script>
   const form = document.getElementById('quote-form') as HTMLFormElement;
   const formSuccess = document.getElementById('form-success');
+  const submitButton = form?.querySelector('button[type="submit"]') as HTMLButtonElement;
 
   form?.addEventListener('submit', async (e) => {
-    e.preventDefault();
+    // Désactiver le bouton pendant la soumission
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.innerHTML = '<span>Envoi en cours...</span>';
+    }
 
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData);
-
-    // Here you would typically send the data to your backend
-    console.log('Form data:', data);
-
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-
-    // Show success message
-    form.classList.add('hidden');
-    formSuccess?.classList.remove('hidden');
-
-    // Track conversion (example with Google Analytics)
+    // Track conversion avec Google Analytics
     if (typeof gtag !== 'undefined') {
       gtag('event', 'conversion', {
         'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL',
@@ -319,5 +325,8 @@ const { cityName } = Astro.props;
         'currency': 'EUR'
       });
     }
+
+    // Netlify Forms gère automatiquement la soumission
+    // Pas besoin de e.preventDefault() - le formulaire sera soumis normalement
   });
 </script>
