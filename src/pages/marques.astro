@@ -94,19 +94,352 @@ import { brands } from '../data/content';
           ))}
         </div>
 
+        <!-- Tableau comparatif -->
+        <div class="mt-16 bg-white rounded-2xl shadow-soft-lg overflow-hidden">
+          <div class="bg-gradient-to-r from-primary-600 to-primary-700 text-white p-8">
+            <h2 class="text-3xl font-bold mb-2">Tableau comparatif des marques</h2>
+            <p class="text-primary-100">Comparaison détaillée des 6 marques leaders</p>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="min-w-full">
+              <thead class="bg-gray-100">
+                <tr>
+                  <th class="px-6 py-4 text-left font-bold text-gray-900">Marque</th>
+                  <th class="px-6 py-4 text-left font-bold text-gray-900">Prix</th>
+                  <th class="px-6 py-4 text-left font-bold text-gray-900">Rendement</th>
+                  <th class="px-6 py-4 text-left font-bold text-gray-900">Bruit</th>
+                  <th class="px-6 py-4 text-left font-bold text-gray-900">Note</th>
+                  <th class="px-6 py-4 text-left font-bold text-gray-900">Meilleur pour</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr class="hover:bg-gray-50">
+                  <td class="px-6 py-4 font-bold text-gray-900">Rika 🇦🇹</td>
+                  <td class="px-6 py-4 text-gray-700">4 000€ - 9 000€</td>
+                  <td class="px-6 py-4"><span class="text-green-600 font-semibold">93-96%</span></td>
+                  <td class="px-6 py-4"><span class="text-green-600 font-semibold">30-33 dB</span></td>
+                  <td class="px-6 py-4">⭐ 4.9/5</td>
+                  <td class="px-6 py-4 text-sm">Très haut de gamme</td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                  <td class="px-6 py-4 font-bold text-gray-900">MCZ 🇮🇹</td>
+                  <td class="px-6 py-4 text-gray-700">3 200€ - 7 500€</td>
+                  <td class="px-6 py-4"><span class="text-green-600 font-semibold">91-94%</span></td>
+                  <td class="px-6 py-4"><span class="text-green-600 font-semibold">32-35 dB</span></td>
+                  <td class="px-6 py-4">⭐ 4.8/5</td>
+                  <td class="px-6 py-4 text-sm">Design & innovation</td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                  <td class="px-6 py-4 font-bold text-gray-900">Palazzetti 🇮🇹</td>
+                  <td class="px-6 py-4 text-gray-700">3 500€ - 8 000€</td>
+                  <td class="px-6 py-4"><span class="text-green-600 font-semibold">90-93%</span></td>
+                  <td class="px-6 py-4">33-38 dB</td>
+                  <td class="px-6 py-4">⭐ 4.8/5</td>
+                  <td class="px-6 py-4 text-sm">Premium connecté</td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                  <td class="px-6 py-4 font-bold text-gray-900">Extraflame 🇮🇹</td>
+                  <td class="px-6 py-4 text-gray-700">2 800€ - 6 500€</td>
+                  <td class="px-6 py-4">89-92%</td>
+                  <td class="px-6 py-4">36-40 dB</td>
+                  <td class="px-6 py-4">⭐ 4.7/5</td>
+                  <td class="px-6 py-4 text-sm">Rapport qualité-prix</td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                  <td class="px-6 py-4 font-bold text-gray-900">Edilkamin 🇮🇹</td>
+                  <td class="px-6 py-4 text-gray-700">2 500€ - 5 500€</td>
+                  <td class="px-6 py-4">88-91%</td>
+                  <td class="px-6 py-4">37-42 dB</td>
+                  <td class="px-6 py-4">⭐ 4.6/5</td>
+                  <td class="px-6 py-4 text-sm">Bon rapport qualité-prix</td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                  <td class="px-6 py-4 font-bold text-gray-900">Invicta 🇫🇷</td>
+                  <td class="px-6 py-4 text-gray-700">2 200€ - 4 800€</td>
+                  <td class="px-6 py-4">87-90%</td>
+                  <td class="px-6 py-4">38-43 dB</td>
+                  <td class="px-6 py-4">⭐ 4.5/5</td>
+                  <td class="px-6 py-4 text-sm">Budget maîtrisé</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Guide complet par gamme -->
+        <div class="mt-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Guide d'achat par gamme de prix</h2>
+
+          <div class="space-y-8">
+            <!-- Haut de gamme -->
+            <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8">
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">👑 Marques Haut de Gamme (4 000€ - 9 000€)</h3>
+              <p class="text-gray-700 mb-6">
+                Pour ceux qui recherchent <strong>l'excellence technique, le design premium et les meilleures performances</strong>. Ces marques offrent les rendements les plus élevés (>93%), les niveaux sonores les plus bas, et les technologies les plus avancées.
+              </p>
+
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg p-6">
+                  <h4 class="font-bold text-gray-900 mb-3">🇦🇹 Rika - Le top autrichien</h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li>✓ <strong>Rendement record</strong> : jusqu'à 96%</li>
+                    <li>✓ <strong>Très silencieux</strong> : 30-33 dB seulement</li>
+                    <li>✓ <strong>Technologie Multiair</strong> : distribution optimale</li>
+                    <li>✓ <strong>Design épuré</strong> : finitions haut de gamme</li>
+                    <li>✓ <strong>Garantie 3 ans</strong> (meilleur du marché)</li>
+                    <li>✓ <strong>Idéal pour</strong> : maisons de standing, BBC/RT2012</li>
+                  </ul>
+                </div>
+
+                <div class="bg-white rounded-lg p-6">
+                  <h4 class="font-bold text-gray-900 mb-3">🇮🇹 MCZ - Innovation italienne</h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li>✓ <strong>Technologie No Air</strong> : pas de ventilateur bruyant</li>
+                    <li>✓ <strong>Design primé</strong> : plusieurs Red Dot Awards</li>
+                    <li>✓ <strong>Très silencieux</strong> : 32-35 dB</li>
+                    <li>✓ <strong>Maestro</strong> : contrôle total via smartphone</li>
+                    <li>✓ <strong>Nettoyage automatique</strong> avancé</li>
+                    <li>✓ <strong>Idéal pour</strong> : design moderne, technophiles</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="mt-6 bg-purple-200 rounded-lg p-4">
+                <p class="text-sm text-purple-900">
+                  <strong>💡 Notre conseil :</strong> Si votre budget le permet, investissez dans une marque haut de gamme. La différence de qualité, confort d'utilisation et durabilité justifie pleinement le surcoût initial.
+                </p>
+              </div>
+            </div>
+
+            <!-- Milieu de gamme -->
+            <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8">
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">⭐ Marques Milieu de Gamme (2 800€ - 6 500€)</h3>
+              <p class="text-gray-700 mb-6">
+                Le <strong>meilleur compromis qualité-prix</strong>. Ces marques offrent d'excellentes performances, des fonctionnalités avancées et une fiabilité éprouvée, sans le prix premium.
+              </p>
+
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg p-6">
+                  <h4 class="font-bold text-gray-900 mb-3">🇮🇹 Palazzetti - Premium accessible</h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li>✓ <strong>Rendement excellent</strong> : 90-93%</li>
+                    <li>✓ <strong>Système Ecofire</strong> : nettoyage automatique complet</li>
+                    <li>✓ <strong>Connexion Wi-Fi</strong> : contrôle à distance</li>
+                    <li>✓ <strong>Design soigné</strong> : finitions de qualité</li>
+                    <li>✓ <strong>Garantie 2 ans</strong> extensible</li>
+                    <li>✓ <strong>Idéal pour</strong> : familles, maisons 100-150 m²</li>
+                  </ul>
+                </div>
+
+                <div class="bg-white rounded-lg p-6">
+                  <h4 class="font-bold text-gray-900 mb-3">🇮🇹 Extraflame - Leader européen</h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li>✓ <strong>Rendement solide</strong> : 89-92%</li>
+                    <li>✓ <strong>Technologie Maestro+</strong> : combustion optimisée</li>
+                    <li>✓ <strong>Large gamme</strong> : tous les besoins couverts</li>
+                    <li>✓ <strong>Fiabilité prouvée</strong> : n°1 en Europe</li>
+                    <li>✓ <strong>SAV efficace</strong> : pièces disponibles</li>
+                    <li>✓ <strong>Idéal pour</strong> : tous types de logements</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="mt-6 bg-blue-200 rounded-lg p-4">
+                <p class="text-sm text-blue-900">
+                  <strong>💡 Notre conseil :</strong> Les marques milieu de gamme représentent le meilleur rapport qualité-prix pour la majorité des foyers. Vous bénéficiez de 90% des fonctionnalités du haut de gamme pour 40% de prix en moins.
+                </p>
+              </div>
+            </div>
+
+            <!-- Entrée de gamme -->
+            <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8">
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">💰 Marques Budget Maîtrisé (2 200€ - 5 500€)</h3>
+              <p class="text-gray-700 mb-6">
+                Pour un <strong>budget maîtrisé sans sacrifier la qualité</strong>. Ces marques offrent des poêles fiables et performants, respectant les normes, avec un excellent rapport qualité-prix.
+              </p>
+
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg p-6">
+                  <h4 class="font-bold text-gray-900 mb-3">🇮🇹 Edilkamin - Fiabilité italienne</h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li>✓ <strong>Rendement correct</strong> : 88-91%</li>
+                    <li>✓ <strong>Label Flamme Verte</strong> : normes respectées</li>
+                    <li>✓ <strong>Large choix</strong> : nombreux modèles</li>
+                    <li>✓ <strong>Prix attractifs</strong> : à partir de 2 500€</li>
+                    <li>✓ <strong>Fiable</strong> : marque établie depuis 1963</li>
+                    <li>✓ <strong>Idéal pour</strong> : premier achat, budget limité</li>
+                  </ul>
+                </div>
+
+                <div class="bg-white rounded-lg p-6">
+                  <h4 class="font-bold text-gray-900 mb-3">🇫🇷 Invicta - Robustesse française</h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li>✓ <strong>Rendement 87-90%</strong> : conforme aux aides</li>
+                    <li>✓ <strong>Fabrication française</strong> : qualité reconnue</li>
+                    <li>✓ <strong>Très robuste</strong> : fonte de qualité</li>
+                    <li>✓ <strong>SAV de proximité</strong> : réseau France</li>
+                    <li>✓ <strong>Prix compétitifs</strong> : dès 2 200€</li>
+                    <li>✓ <strong>Idéal pour</strong> : achat patriotique, budget serré</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="mt-6 bg-green-200 rounded-lg p-4">
+                <p class="text-sm text-green-900">
+                  <strong>💡 Notre conseil :</strong> Les marques d'entrée de gamme offrent un excellent point d'entrée dans le monde du chauffage aux granulés. Avec les aides (MaPrimeRénov' + CEE), le reste à charge peut descendre sous 3 000€.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Critères de choix détaillés -->
         <div class="mt-16 bg-accent-50 rounded-2xl p-8">
-          <h2 class="text-2xl font-bold text-gray-900 mb-6">Comment choisir la bonne marque de poêle à granulé ?</h2>
+          <h2 class="text-3xl font-bold text-gray-900 mb-8">🎯 Comment choisir la bonne marque de poêle à granulé ?</h2>
           <div class="prose prose-lg max-w-none text-gray-700">
-            <p>
-              Le choix de la marque de votre poêle à granulé est crucial pour garantir <strong>performance, fiabilité et durabilité</strong>. Voici les critères essentiels à prendre en compte :
+            <p class="text-lg mb-6">
+              Le choix de la marque de votre poêle à granulé est crucial pour garantir <strong>performance, fiabilité et durabilité</strong>. Voici les critères essentiels à analyser :
             </p>
-            <ul>
-              <li><strong>Budget</strong> : Les marques premium (Rika, MCZ, Palazzetti) offrent les meilleures performances mais coûtent plus cher. Les marques comme Invicta ou Edilkamin proposent un excellent rapport qualité-prix.</li>
-              <li><strong>Rendement</strong> : Privilégiez les poêles avec un rendement supérieur à 90% pour maximiser vos économies d'énergie.</li>
-              <li><strong>Niveau sonore</strong> : Les marques haut de gamme proposent des modèles plus silencieux (30-35 dB) grâce à des technologies avancées.</li>
-              <li><strong>Design</strong> : Selon vos goûts, certaines marques se démarquent (MCZ et Palazzetti pour le design moderne, Invicta pour le style traditionnel).</li>
-              <li><strong>SAV et disponibilité des pièces</strong> : Assurez-vous que la marque dispose d'un bon service après-vente en France.</li>
+
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">1. Le rendement énergétique</h3>
+            <p>
+              Le <strong>rendement</strong> indique le pourcentage d'énergie transformée en chaleur. Un poêle à 90% de rendement convertit 90% des granulés en chaleur utile.
+            </p>
+            <ul class="space-y-2 mb-6">
+              <li>🔴 <strong>Minimum requis pour les aides</strong> : 87%</li>
+              <li>🟡 <strong>Bon rendement</strong> : 88-91%</li>
+              <li>🟢 <strong>Excellent rendement</strong> : 92-94%</li>
+              <li>⭐ <strong>Rendement exceptionnel</strong> : 95-96% (Rika, MCZ)</li>
             </ul>
+            <p class="bg-yellow-50 border-l-4 border-yellow-500 p-4 text-sm">
+              <strong>Impact sur votre budget</strong> : Un poêle à 95% de rendement consomme 5% de granulés en moins qu'un poêle à 90%. Sur 3 tonnes/an, cela représente 150 kg économisés, soit 50-60€/an d'économies.
+            </p>
+
+            <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">2. Le niveau sonore</h3>
+            <p>
+              Le bruit provient de la vis d'alimentation et des ventilateurs. Un poêle silencieux améliore considérablement le confort quotidien.
+            </p>
+            <ul class="space-y-2 mb-6">
+              <li>🔴 <strong>Bruyant</strong> : > 45 dB (à éviter en pièce de vie)</li>
+              <li>🟡 <strong>Niveau standard</strong> : 40-45 dB (acceptable)</li>
+              <li>🟢 <strong>Silencieux</strong> : 35-40 dB (confortable)</li>
+              <li>⭐ <strong>Très silencieux</strong> : 30-35 dB (Rika, MCZ No Air)</li>
+            </ul>
+
+            <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">3. La garantie et le SAV</h3>
+            <ul class="space-y-2 mb-6">
+              <li><strong>Garantie standard</strong> : 2 ans (la plupart des marques)</li>
+              <li><strong>Garantie étendue</strong> : 3 ans (Rika) ou extension payante possible</li>
+              <li><strong>Disponibilité des pièces</strong> : Privilégiez les grandes marques (stock garanti)</li>
+              <li><strong>Réseau SAV en France</strong> : Essentiel pour interventions rapides</li>
+            </ul>
+
+            <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">4. Les fonctionnalités et technologies</h3>
+            <div class="bg-white rounded-lg p-6 mb-6">
+              <h4 class="font-bold text-gray-900 mb-3">Fonctions essentielles (toutes marques)</h4>
+              <ul class="space-y-1 text-sm">
+                <li>✓ Programmation hebdomadaire</li>
+                <li>✓ Thermostat intégré</li>
+                <li>✓ Allumage/extinction automatiques</li>
+                <li>✓ Réglage de la puissance</li>
+              </ul>
+            </div>
+            <div class="bg-white rounded-lg p-6 mb-6">
+              <h4 class="font-bold text-gray-900 mb-3">Fonctions avancées (milieu/haut de gamme)</h4>
+              <ul class="space-y-1 text-sm">
+                <li>✓ Nettoyage automatique du creuset</li>
+                <li>✓ Connexion Wi-Fi / Contrôle smartphone</li>
+                <li>✓ Multiair / Canalisation</li>
+                <li>✓ Détection automatique qualité granulés</li>
+              </ul>
+            </div>
+
+            <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">5. Le design et l'intégration</h3>
+            <p>
+              Votre poêle est visible dans votre pièce de vie : le design compte !
+            </p>
+            <ul class="space-y-2">
+              <li><strong>Design moderne/minimaliste</strong> : MCZ, Palazzetti, Rika</li>
+              <li><strong>Style traditionnel</strong> : Invicta, certains modèles Edilkamin</li>
+              <li><strong>Finitions premium</strong> : Céramique (Rika), pierre ollaire, verre</li>
+              <li><strong>Choix de couleurs</strong> : Noir, blanc, gris, bordeaux selon marques</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- FAQ Marques -->
+        <div class="mt-16 bg-white rounded-2xl shadow-soft-lg p-8">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8">❓ FAQ sur les marques de poêles à granulé</h2>
+          <div class="space-y-6">
+            <div class="border-l-4 border-primary-600 pl-6">
+              <h3 class="font-bold text-gray-900 mb-2">Quelle est la meilleure marque de poêle à granulé ?</h3>
+              <p class="text-gray-700 text-sm">
+                <strong>Rika</strong> est considérée comme la meilleure marque en termes de performance pure (rendement 95%+, silence). Cependant, <strong>MCZ et Palazzetti</strong> offrent un excellent rapport qualité-prix-design. Pour un budget serré, <strong>Extraflame ou Edilkamin</strong> sont d'excellents choix.
+              </p>
+            </div>
+
+            <div class="border-l-4 border-primary-600 pl-6">
+              <h3 class="font-bold text-gray-900 mb-2">Quelle marque choisir pour un poêle silencieux ?</h3>
+              <p class="text-gray-700 text-sm">
+                <strong>Rika</strong> (30-33 dB) et <strong>MCZ avec technologie No Air</strong> (32-35 dB) sont les plus silencieux du marché. MCZ No Air supprime même les ventilateurs grâce à la convection naturelle.
+              </p>
+            </div>
+
+            <div class="border-l-4 border-primary-600 pl-6">
+              <h3 class="font-bold text-gray-900 mb-2">Les marques italiennes sont-elles meilleures que les françaises ?</h3>
+              <p class="text-gray-700 text-sm">
+                L'Italie domine le marché avec MCZ, Palazzetti, Extraflame et Edilkamin qui proposent les technologies les plus avancées. <strong>Invicta</strong> (France) offre des poêles robustes et fiables à prix attractifs, avec l'avantage d'un SAV de proximité. Le choix dépend de vos priorités : innovation (Italie) ou rapport qualité-prix + SAV local (France).
+              </p>
+            </div>
+
+            <div class="border-l-4 border-primary-600 pl-6">
+              <h3 class="font-bold text-gray-900 mb-2">Quel budget pour un bon poêle à granulé ?</h3>
+              <p class="text-gray-700 text-sm">
+                Comptez <strong>3 500€ à 6 000€ installation comprise</strong> pour un poêle milieu de gamme de qualité (Extraflame, Palazzetti, Edilkamin). Avec les aides MaPrimeRénov' + CEE, le reste à charge est souvent de 2 500€ à 3 500€. Consultez notre <a href="/prix-installation" class="text-primary-600 font-semibold">guide des prix détaillé</a>.
+              </p>
+            </div>
+
+            <div class="border-l-4 border-primary-600 pl-6">
+              <h3 class="font-bold text-gray-900 mb-2">Toutes les marques donnent-elles accès aux aides financières ?</h3>
+              <p class="text-gray-700 text-sm">
+                Oui, toutes les marques présentées (Rika, MCZ, Palazzetti, Extraflame, Edilkamin, Invicta) proposent des modèles éligibles aux aides avec <strong>rendement ≥ 87%</strong> et <strong>label Flamme Verte 7 étoiles</strong>. L'installation par un <strong>professionnel RGE Qualibois</strong> est obligatoire.
+              </p>
+            </div>
+
+            <div class="border-l-4 border-primary-600 pl-6">
+              <h3 class="font-bold text-gray-900 mb-2">Vaut-il mieux acheter en ligne ou via un installateur ?</h3>
+              <p class="text-gray-700 text-sm">
+                <strong>Passez toujours par un installateur RGE</strong> pour plusieurs raisons : prix négociés (souvent meilleurs qu'en ligne), installation conforme garantie, accès aux aides financières, garantie constructeur activée, formation à l'utilisation, et SAV assuré. L'achat seul en ligne vous fait perdre 2 500€ à 3 500€ d'aides !
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Final -->
+        <div class="mt-16 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-2xl p-8 text-center">
+          <h2 class="text-3xl font-bold mb-4">Besoin de conseils pour choisir votre marque ?</h2>
+          <p class="text-xl text-primary-100 mb-8">
+            Nos experts vous aident gratuitement à sélectionner la marque et le modèle idéal selon votre budget et vos besoins
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="#devis"
+              class="inline-flex items-center space-x-2 bg-white hover:bg-gray-100 text-primary-600 px-8 py-4 rounded-lg font-bold text-lg shadow-xl transition-all"
+            >
+              <span>Obtenir mon devis gratuit</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </a>
+            <a
+              href="/guide"
+              class="inline-flex items-center space-x-2 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg font-bold text-lg border-2 border-white/30 transition-all"
+            >
+              <span>Consulter le guide complet</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </a>
           </div>
         </div>
       </div>
