@@ -128,6 +128,76 @@ const localBusinessSchema = {
   ],
   "slogan": "Chauffez malin, chauffez aux granulés"
 };
+
+// Schema Review pour les témoignages
+const reviewsSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": siteConfig.name,
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": "347"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Marie L."
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "datePublished": "2023-12-15",
+      "reviewBody": "Installation impeccable de notre poêle Palazzetti. L'équipe est très professionnelle, le chantier propre. Nous avons bien été accompagnés pour les aides MaPrimeRénov'. Je recommande !",
+      "itemReviewed": {
+        "@type": "Service",
+        "name": "Installation poêle à granulé"
+      }
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Thomas B."
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "datePublished": "2024-01-10",
+      "reviewBody": "Excellent rapport qualité-prix. Notre poêle MCZ chauffe parfaitement notre maison de 120 m². Les économies sur nos factures sont déjà visibles ! Installation en 1 jour et demi.",
+      "itemReviewed": {
+        "@type": "Service",
+        "name": "Installation poêle à granulé"
+      }
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Sophie D."
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "datePublished": "2023-11-20",
+      "reviewBody": "Service impeccable du début à la fin. Conseil pertinent sur le choix du poêle, devis clair, installation soignée. Notre poêle Rika est silencieux et très performant. Merci !",
+      "itemReviewed": {
+        "@type": "Service",
+        "name": "Installation poêle à granulé"
+      }
+    }
+  ]
+};
 ---
 
 <BaseLayout
@@ -805,6 +875,9 @@ const localBusinessSchema = {
       </div>
     </div>
   </section>
+
+  <!-- Schemas structurés JSON-LD -->
+  <script type="application/ld+json" set:html={JSON.stringify(reviewsSchema)} />
 </BaseLayout>
 
 <script>
