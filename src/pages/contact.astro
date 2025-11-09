@@ -351,7 +351,7 @@ import { siteConfig } from '../data/seo';
   const contactForm = document.querySelector('form[name="contact"]') as HTMLFormElement;
   const submitButton = contactForm?.querySelector('button[type="submit"]') as HTMLButtonElement;
 
-  contactForm?.addEventListener('submit', (e) => {
+  contactForm?.addEventListener('submit', () => {
     // Désactiver le bouton pendant la soumission
     if (submitButton) {
       submitButton.disabled = true;
@@ -359,8 +359,8 @@ import { siteConfig } from '../data/seo';
     }
 
     // Track event avec Google Analytics si disponible
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'submit_contact_form', {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'submit_contact_form', {
         'event_category': 'Contact',
         'event_label': 'Contact Form Submission'
       });
