@@ -7,21 +7,54 @@ import { cities } from '../data/cities';
 
 const topCities = cities.slice(0, 8);
 
-// Structured Data for Homepage
-const structuredData = {
+// Structured Data for Homepage - LocalBusiness + Service
+const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Installation de poêle à granulé",
-  "provider": {
-    "@type": "HomeAndConstructionBusiness",
-    "name": siteConfig.name,
-    "url": siteConfig.url,
-    "telephone": siteConfig.contactPhone,
-    "email": siteConfig.contactEmail
+  "@type": "LocalBusiness",
+  "@id": siteConfig.url,
+  "name": siteConfig.name,
+  "image": `${siteConfig.url}/images/logo.png`,
+  "description": "Installation professionnelle de poêles à granulés certifiée RGE. Devis gratuit, accompagnement aides MaPrimeRénov', installation en 48h partout en France.",
+  "url": siteConfig.url,
+  "telephone": siteConfig.contactPhone,
+  "email": siteConfig.contactEmail,
+  "priceRange": "€€-€€€",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "FR",
+    "addressRegion": "France métropolitaine"
   },
-  "areaServed": {
-    "@type": "Country",
-    "name": "France"
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "46.603354",
+    "longitude": "1.888334"
+  },
+  "areaServed": [
+    {
+      "@type": "Country",
+      "name": "France"
+    }
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "17:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "bestRating": "5",
+    "worstRating": "1",
+    "reviewCount": "347"
   },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -32,7 +65,18 @@ const structuredData = {
         "itemOffered": {
           "@type": "Service",
           "name": "Installation complète poêle à granulé",
-          "description": "Achat et installation professionnelle de poêle à granulé par installateur RGE"
+          "description": "Achat et installation professionnelle de poêle à granulé par installateur RGE certifié Qualibois",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": siteConfig.name
+          }
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "EUR",
+          "price": "5500",
+          "minPrice": "4000",
+          "maxPrice": "10000"
         }
       },
       {
@@ -40,23 +84,56 @@ const structuredData = {
         "itemOffered": {
           "@type": "Service",
           "name": "Installation seule poêle à granulé",
-          "description": "Installation professionnelle de votre poêle à granulé déjà acheté"
+          "description": "Installation professionnelle de votre poêle à granulé déjà acheté avec certification RGE"
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "EUR",
+          "price": "1500",
+          "minPrice": "800",
+          "maxPrice": "2500"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Entretien annuel poêle à granulé",
+          "description": "Ramonage et entretien annuel obligatoire de votre poêle à granulé"
+        },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "EUR",
+          "price": "150",
+          "minPrice": "120",
+          "maxPrice": "250"
         }
       }
     ]
   },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "347"
-  }
+  "certification": [
+    "RGE Qualibois",
+    "Flamme Verte",
+    "Quali'EnR"
+  ],
+  "knowsAbout": [
+    "Installation poêle à granulé",
+    "Poêle à pellets",
+    "Chauffage biomasse",
+    "Certification RGE",
+    "MaPrimeRénov'",
+    "Prime CEE",
+    "Ramonage",
+    "Entretien poêle"
+  ],
+  "slogan": "Chauffez malin, chauffez aux granulés"
 };
 ---
 
 <BaseLayout
   title="Installation Poêle à Granulé - Devis Gratuit & Aides 2024"
   description="Installation poêle à granulé certifiée RGE. Devis gratuit 24h, aides MaPrimeRénov' jusqu'à 2500€. Installation pro en 48h. Économisez 60% sur le chauffage."
-  structuredData={structuredData}
+  structuredData={localBusinessSchema}
 >
   <!-- Hero Section -->
   <section class="relative bg-gradient-to-br from-accent-900 via-accent-800 to-accent-900 text-white overflow-hidden">
