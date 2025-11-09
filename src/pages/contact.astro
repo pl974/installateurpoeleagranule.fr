@@ -1,0 +1,343 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+import { siteConfig } from '../data/seo';
+---
+
+<BaseLayout
+  title="Contact - Installateur Poêle à Granulé | Devis Gratuit 24h"
+  description="Contactez nos experts en installation de poêles à granulés. Devis gratuit sous 24h, conseils personnalisés. ☎️ 01 23 45 67 89 - Disponibles 6j/7."
+  keywords={['contact installateur poêle granulé', 'devis poêle à granulé', 'conseil poêle pellets', 'RDV installateur RGE']}
+>
+  <section class="py-20 bg-gradient-to-br from-gray-50 to-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl mx-auto">
+        <!-- Header -->
+        <div class="text-center mb-12">
+          <h1 class="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-6">
+            Contactez-nous
+          </h1>
+          <p class="text-xl text-gray-600">
+            Une question ? Un projet d'installation ? Notre équipe d'experts vous répond sous 24h
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-8 mb-12">
+          <!-- Informations de contact -->
+          <div class="space-y-6">
+            <div class="bg-white rounded-2xl shadow-soft-lg p-8">
+              <h2 class="text-2xl font-bold text-gray-900 mb-6">Nos coordonnées</h2>
+
+              <div class="space-y-6">
+                <!-- Téléphone -->
+                <div class="flex items-start space-x-4">
+                  <div class="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
+                    <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-gray-900 mb-1">Téléphone</h3>
+                    <a href="tel:+33123456789" class="text-primary-600 hover:text-primary-700 text-lg font-semibold">
+                      01 23 45 67 89
+                    </a>
+                    <p class="text-sm text-gray-600 mt-1">Du lundi au samedi</p>
+                  </div>
+                </div>
+
+                <!-- Email -->
+                <div class="flex items-start space-x-4">
+                  <div class="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
+                    <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-gray-900 mb-1">Email</h3>
+                    <a href={`mailto:${siteConfig.contactEmail}`} class="text-primary-600 hover:text-primary-700 font-semibold">
+                      {siteConfig.contactEmail}
+                    </a>
+                    <p class="text-sm text-gray-600 mt-1">Réponse sous 24h</p>
+                  </div>
+                </div>
+
+                <!-- Horaires -->
+                <div class="flex items-start space-x-4">
+                  <div class="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
+                    <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-gray-900 mb-2">Horaires d'ouverture</h3>
+                    <div class="space-y-1 text-sm text-gray-700">
+                      <p><strong>Lundi - Vendredi :</strong> 8h00 - 19h00</p>
+                      <p><strong>Samedi :</strong> 9h00 - 17h00</p>
+                      <p class="text-gray-500"><strong>Dimanche :</strong> Fermé</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Zone d'intervention -->
+                <div class="flex items-start space-x-4">
+                  <div class="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
+                    <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-gray-900 mb-1">Zone d'intervention</h3>
+                    <p class="text-gray-700">Toute la France</p>
+                    <p class="text-sm text-gray-600 mt-1">+ de 100 villes couvertes</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-8">
+              <h2 class="text-xl font-bold text-gray-900 mb-4">Nos certifications</h2>
+              <div class="space-y-3">
+                <div class="flex items-center space-x-3">
+                  <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="font-semibold text-gray-900">Certifié RGE Qualibois</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
+                  </svg>
+                  <span class="font-semibold text-gray-900">Label Flamme Verte</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="font-semibold text-gray-900">Garantie 2 ans</span>
+                </div>
+              </div>
+              <p class="text-sm text-gray-600 mt-4">
+                Nos certifications vous garantissent l'accès aux aides MaPrimeRénov' et Prime CEE
+              </p>
+            </div>
+
+            <!-- Nos engagements -->
+            <div class="bg-white rounded-2xl shadow-soft-lg p-8">
+              <h2 class="text-xl font-bold text-gray-900 mb-4">Nos engagements</h2>
+              <ul class="space-y-3">
+                <li class="flex items-start space-x-3">
+                  <svg class="w-5 h-5 text-primary-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="text-gray-700">Devis gratuit et sans engagement</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <svg class="w-5 h-5 text-primary-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="text-gray-700">Réponse sous 24h maximum</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <svg class="w-5 h-5 text-primary-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="text-gray-700">Installation professionnelle en 48h</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <svg class="w-5 h-5 text-primary-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="text-gray-700">Accompagnement aides financières</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <svg class="w-5 h-5 text-primary-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="text-gray-700">Service après-vente réactif</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Formulaire de contact -->
+          <div>
+            <div class="bg-white rounded-2xl shadow-soft-lg p-8">
+              <h2 class="text-2xl font-bold text-gray-900 mb-2">Envoyez-nous un message</h2>
+              <p class="text-gray-600 mb-6">Remplissez le formulaire ci-dessous, nous vous recontacterons rapidement</p>
+
+              <form class="space-y-5">
+                <div class="grid md:grid-cols-2 gap-5">
+                  <div>
+                    <label for="prenom" class="block text-sm font-semibold text-gray-700 mb-2">
+                      Prénom <span class="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="prenom"
+                      name="prenom"
+                      required
+                      class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary-500 focus:outline-none transition-colors"
+                      placeholder="Jean"
+                    />
+                  </div>
+                  <div>
+                    <label for="nom" class="block text-sm font-semibold text-gray-700 mb-2">
+                      Nom <span class="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="nom"
+                      name="nom"
+                      required
+                      class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary-500 focus:outline-none transition-colors"
+                      placeholder="Dupont"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">
+                    Email <span class="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary-500 focus:outline-none transition-colors"
+                    placeholder="jean.dupont@email.fr"
+                  />
+                </div>
+
+                <div>
+                  <label for="telephone" class="block text-sm font-semibold text-gray-700 mb-2">
+                    Téléphone <span class="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="tel"
+                    id="telephone"
+                    name="telephone"
+                    required
+                    class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary-500 focus:outline-none transition-colors"
+                    placeholder="06 12 34 56 78"
+                  />
+                </div>
+
+                <div>
+                  <label for="ville" class="block text-sm font-semibold text-gray-700 mb-2">
+                    Ville / Code postal <span class="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="ville"
+                    name="ville"
+                    required
+                    class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary-500 focus:outline-none transition-colors"
+                    placeholder="Paris 75001"
+                  />
+                </div>
+
+                <div>
+                  <label for="sujet" class="block text-sm font-semibold text-gray-700 mb-2">
+                    Sujet de votre demande <span class="text-red-500">*</span>
+                  </label>
+                  <select
+                    id="sujet"
+                    name="sujet"
+                    required
+                    class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary-500 focus:outline-none transition-colors"
+                  >
+                    <option value="">Sélectionnez un sujet</option>
+                    <option value="devis">Demande de devis</option>
+                    <option value="conseil">Conseil / Orientation</option>
+                    <option value="aides">Questions sur les aides financières</option>
+                    <option value="sav">Service après-vente</option>
+                    <option value="autre">Autre</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">
+                    Votre message <span class="text-red-500">*</span>
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required
+                    class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary-500 focus:outline-none transition-colors resize-none"
+                    placeholder="Décrivez votre projet ou posez votre question..."
+                  ></textarea>
+                </div>
+
+                <div class="flex items-start">
+                  <input
+                    type="checkbox"
+                    id="rgpd"
+                    name="rgpd"
+                    required
+                    class="mt-1 mr-3 w-5 h-5 text-primary-600 border-gray-300 rounded focus:ring-primary-500"
+                  />
+                  <label for="rgpd" class="text-sm text-gray-600">
+                    J'accepte que mes données soient utilisées pour me recontacter concernant ma demande. <a href="/politique-confidentialite" class="text-primary-600 hover:text-primary-700">Politique de confidentialité</a>
+                  </label>
+                </div>
+
+                <button
+                  type="submit"
+                  class="w-full bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2"
+                >
+                  <span>Envoyer ma demande</span>
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </button>
+
+                <p class="text-xs text-center text-gray-500">
+                  Réponse garantie sous 24h ouvrées
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ rapide -->
+        <div class="bg-gradient-to-br from-primary-50 to-blue-50 rounded-2xl p-8">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">Questions fréquentes</h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white rounded-lg p-6">
+              <h3 class="font-bold text-gray-900 mb-2">🕐 Quel est le délai pour obtenir un devis ?</h3>
+              <p class="text-sm text-gray-700">Nous vous envoyons un devis détaillé sous 24h maximum après réception de votre demande.</p>
+            </div>
+            <div class="bg-white rounded-lg p-6">
+              <h3 class="font-bold text-gray-900 mb-2">💰 Le devis est-il gratuit ?</h3>
+              <p class="text-sm text-gray-700">Oui, le devis est 100% gratuit et sans aucun engagement de votre part.</p>
+            </div>
+            <div class="bg-white rounded-lg p-6">
+              <h3 class="font-bold text-gray-900 mb-2">📍 Intervenez-vous dans ma ville ?</h3>
+              <p class="text-sm text-gray-700">Nous intervenons dans plus de 100 villes en France. Contactez-nous pour vérifier votre zone.</p>
+            </div>
+            <div class="bg-white rounded-lg p-6">
+              <h3 class="font-bold text-gray-900 mb-2">🎁 M'aidez-vous pour les aides financières ?</h3>
+              <p class="text-sm text-gray-700">Oui, nous vous accompagnons dans toutes vos démarches pour obtenir MaPrimeRénov' et la Prime CEE.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulaire de devis rapide -->
+  <QuoteForm />
+</BaseLayout>
+
+<script>
+  // Form submission handler (à adapter selon votre backend)
+  document.querySelector('form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Merci pour votre message ! Nous vous recontacterons sous 24h.');
+    // Ici, ajoutez votre logique d'envoi de formulaire
+  });
+</script>

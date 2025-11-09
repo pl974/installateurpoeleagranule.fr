@@ -1,0 +1,841 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Guide Complet du Poêle à Granulé 2024",
+  "description": "Guide complet et détaillé sur les poêles à granulés : choix, installation, entretien, prix, aides financières. Tout ce qu'il faut savoir avant d'acheter.",
+  "author": {
+    "@type": "Organization",
+    "name": "Installateur Poêle à Granulé"
+  },
+  "datePublished": "2024-01-15",
+  "dateModified": "2024-01-15"
+};
+---
+
+<BaseLayout
+  title="Guide Complet Poêle à Granulé 2024 - Tout Savoir sur les Pellets"
+  description="Guide complet poêle à granulé : fonctionnement, choix, installation, prix, aides, entretien. Tous nos conseils d'experts pour bien choisir votre chauffage aux pellets."
+  keywords={['guide poêle à granulé', 'comment choisir poêle granulé', 'fonctionnement poêle pellets', 'installation poêle granulé', 'entretien poêle granulé']}
+  structuredData={structuredData}
+>
+  <section class="py-20 bg-gradient-to-br from-gray-50 to-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <!-- Header -->
+        <div class="text-center mb-12">
+          <h1 class="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-6">
+            Guide Complet du Poêle à Granulé 2024
+          </h1>
+          <p class="text-xl text-gray-600">
+            Tout ce que vous devez savoir avant d'installer votre poêle à granulés : fonctionnement, choix, prix, installation et entretien
+          </p>
+        </div>
+
+        <!-- Table des matières -->
+        <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-12 rounded-r-lg">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">📑 Table des matières</h2>
+          <nav class="space-y-2">
+            <a href="#fonctionnement" class="block text-primary-700 hover:text-primary-900 font-medium">1. Comment fonctionne un poêle à granulé ?</a>
+            <a href="#avantages" class="block text-primary-700 hover:text-primary-900 font-medium">2. Les avantages et inconvénients</a>
+            <a href="#types" class="block text-primary-700 hover:text-primary-900 font-medium">3. Les différents types de poêles à granulé</a>
+            <a href="#choisir" class="block text-primary-700 hover:text-primary-900 font-medium">4. Comment choisir son poêle à granulé ?</a>
+            <a href="#marques" class="block text-primary-700 hover:text-primary-900 font-medium">5. Les meilleures marques</a>
+            <a href="#prix" class="block text-primary-700 hover:text-primary-900 font-medium">6. Prix d'achat et d'installation</a>
+            <a href="#aides" class="block text-primary-700 hover:text-primary-900 font-medium">7. Aides financières disponibles</a>
+            <a href="#installation" class="block text-primary-700 hover:text-primary-900 font-medium">8. Le processus d'installation</a>
+            <a href="#entretien" class="block text-primary-700 hover:text-primary-900 font-medium">9. Entretien et maintenance</a>
+            <a href="#granules" class="block text-primary-700 hover:text-primary-900 font-medium">10. Tout sur les granulés (pellets)</a>
+          </nav>
+        </div>
+
+        <!-- Section 1 -->
+        <article class="prose prose-lg max-w-none">
+          <h2 id="fonctionnement" class="text-3xl font-bold text-gray-900 mb-6 scroll-mt-20">
+            1. Comment fonctionne un poêle à granulé ?
+          </h2>
+
+          <p class="text-gray-700 mb-4">
+            Le <strong>poêle à granulé</strong> (ou poêle à pellets) est un système de chauffage automatisé qui utilise des granulés de bois compressés comme combustible. Son fonctionnement repose sur plusieurs composants clés :
+          </p>
+
+          <h3 class="text-2xl font-bold text-gray-900 mb-4 mt-8">Les composants essentiels</h3>
+
+          <div class="bg-white rounded-lg p-6 shadow-md mb-6">
+            <ul class="space-y-4">
+              <li class="flex items-start space-x-3">
+                <span class="text-2xl">🔥</span>
+                <div>
+                  <strong class="text-gray-900">Le réservoir (trémie)</strong>
+                  <p class="text-gray-600">Stocke les granulés (15 à 35 kg selon les modèles), assurant une autonomie de 1 à 3 jours selon la consommation.</p>
+                </div>
+              </li>
+              <li class="flex items-start space-x-3">
+                <span class="text-2xl">⚙️</span>
+                <div>
+                  <strong class="text-gray-900">La vis sans fin</strong>
+                  <p class="text-gray-600">Achemine automatiquement les granulés du réservoir vers le creuset de combustion selon les besoins en chaleur.</p>
+                </div>
+              </li>
+              <li class="flex items-start space-x-3">
+                <span class="text-2xl">🔥</span>
+                <div>
+                  <strong class="text-gray-900">Le creuset de combustion</strong>
+                  <p class="text-gray-600">Zone où les granulés brûlent à haute température (jusqu'à 900°C) avec un apport d'air contrôlé pour une combustion optimale.</p>
+                </div>
+              </li>
+              <li class="flex items-start space-x-3">
+                <span class="text-2xl">💨</span>
+                <div>
+                  <strong class="text-gray-900">Le système de ventilation</strong>
+                  <p class="text-gray-600">Diffuse l'air chaud dans la pièce (convection forcée) et alimente la combustion en oxygène.</p>
+                </div>
+              </li>
+              <li class="flex items-start space-x-3">
+                <span class="text-2xl">🌡️</span>
+                <div>
+                  <strong class="text-gray-900">Le thermostat et l'électronique</strong>
+                  <p class="text-gray-600">Régule automatiquement la combustion pour maintenir la température souhaitée. Permet la programmation hebdomadaire.</p>
+                </div>
+              </li>
+              <li class="flex items-start space-x-3">
+                <span class="text-2xl">💨</span>
+                <div>
+                  <strong class="text-gray-900">Le conduit d'évacuation</strong>
+                  <p class="text-gray-600">Évacue les fumées à l'extérieur (conduit vertical ou ventouse horizontale).</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <h3 class="text-2xl font-bold text-gray-900 mb-4 mt-8">Le cycle de fonctionnement</h3>
+
+          <div class="bg-gradient-to-r from-primary-50 to-blue-50 rounded-lg p-6 mb-6">
+            <ol class="space-y-4">
+              <li>
+                <strong>1. Allumage automatique</strong> : Une résistance électrique chauffe le creuset et allume les premiers granulés (3-10 minutes).
+              </li>
+              <li>
+                <strong>2. Alimentation continue</strong> : La vis sans fin apporte régulièrement des granulés selon les besoins.
+              </li>
+              <li>
+                <strong>3. Combustion optimisée</strong> : L'air est injecté de manière contrôlée pour atteindre un rendement de 87% à 95%.
+              </li>
+              <li>
+                <strong>4. Diffusion de chaleur</strong> : Les ventilateurs propulsent l'air chaud dans la pièce ou via des canalisations.
+              </li>
+              <li>
+                <strong>5. Régulation automatique</strong> : Le thermostat ajuste la puissance pour maintenir la température programmée.
+              </li>
+              <li>
+                <strong>6. Extinction programmée</strong> : Le poêle s'éteint automatiquement selon vos réglages, puis ventile pour refroidir.
+              </li>
+            </ol>
+          </div>
+
+          <p class="text-gray-700 mb-6">
+            <strong>Consommation électrique</strong> : Un poêle à granulé consomme entre 50 et 150 watts en fonctionnement, soit environ 1€ par jour. Cette faible consommation est largement compensée par les économies sur le chauffage (jusqu'à 60% d'économies).
+          </p>
+
+          <!-- Section 2 -->
+          <h2 id="avantages" class="text-3xl font-bold text-gray-900 mb-6 mt-12 scroll-mt-20">
+            2. Les avantages et inconvénients du poêle à granulé
+          </h2>
+
+          <h3 class="text-2xl font-bold text-green-700 mb-4">✅ Les avantages</h3>
+
+          <div class="grid md:grid-cols-2 gap-4 mb-8">
+            <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+              <h4 class="font-bold text-gray-900 mb-2">💰 Économies importantes</h4>
+              <p class="text-sm text-gray-700">Jusqu'à 60% d'économies sur vos factures de chauffage par rapport au fioul, gaz ou électricité. Le granulé est l'un des combustibles les moins chers du marché.</p>
+            </div>
+            <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+              <h4 class="font-bold text-gray-900 mb-2">🌱 Écologique et renouvelable</h4>
+              <p class="text-sm text-gray-700">Énergie 100% renouvelable, bilan carbone neutre. Les granulés sont fabriqués à partir de sciure de bois recyclée.</p>
+            </div>
+            <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+              <h4 class="font-bold text-gray-900 mb-2">🤖 Automatisme et confort</h4>
+              <p class="text-sm text-gray-700">Allumage, extinction et régulation automatiques. Programmation hebdomadaire. Contrôle à distance via Wi-Fi sur certains modèles.</p>
+            </div>
+            <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+              <h4 class="font-bold text-gray-900 mb-2">⚡ Haut rendement</h4>
+              <p class="text-sm text-gray-700">Rendement de 87% à 95% : presque toute l'énergie du combustible est transformée en chaleur, contre 60-70% pour un insert bois.</p>
+            </div>
+            <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+              <h4 class="font-bold text-gray-900 mb-2">⏰ Grande autonomie</h4>
+              <p class="text-sm text-gray-700">1 à 3 jours d'autonomie selon le réservoir et la consommation. Plus besoin de recharger plusieurs fois par jour comme avec un poêle à bois.</p>
+            </div>
+            <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+              <h4 class="font-bold text-gray-900 mb-2">🎁 Aides financières</h4>
+              <p class="text-sm text-gray-700">MaPrimeRénov', Prime CEE, Éco-PTZ, TVA 5,5% : jusqu'à 3 500€ d'aides cumulables pour réduire le coût d'installation.</p>
+            </div>
+            <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+              <h4 class="font-bold text-gray-900 mb-2">🎨 Design moderne</h4>
+              <p class="text-sm text-gray-700">Large choix de styles (contemporain, traditionnel, design) et de couleurs pour s'intégrer à tous les intérieurs.</p>
+            </div>
+            <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+              <h4 class="font-bold text-gray-900 mb-2">📏 Compact</h4>
+              <p class="text-sm text-gray-700">Moins encombrant qu'une chaudière. S'installe facilement même dans des espaces réduits.</p>
+            </div>
+          </div>
+
+          <h3 class="text-2xl font-bold text-orange-700 mb-4">⚠️ Les inconvénients</h3>
+
+          <div class="grid md:grid-cols-2 gap-4 mb-8">
+            <div class="bg-orange-50 border border-orange-200 rounded-lg p-4">
+              <h4 class="font-bold text-gray-900 mb-2">💸 Investissement initial</h4>
+              <p class="text-sm text-gray-700">Coût d'achat et d'installation entre 4 000€ et 10 000€. Cependant, les aides réduisent fortement ce montant (reste à charge 2 500€ à 6 000€).</p>
+            </div>
+            <div class="bg-orange-50 border border-orange-200 rounded-lg p-4">
+              <h4 class="font-bold text-gray-900 mb-2">🔌 Besoin d'électricité</h4>
+              <p class="text-sm text-gray-700">Ne fonctionne pas en cas de coupure de courant (sauf modèles équipés de batteries de secours).</p>
+            </div>
+            <div class="bg-orange-50 border border-orange-200 rounded-lg p-4">
+              <h4 class="font-bold text-gray-900 mb-2">🔊 Léger bruit</h4>
+              <p class="text-sm text-gray-700">Bruit de la vis d'alimentation et des ventilateurs (35-45 dB). Les modèles haut de gamme sont plus silencieux (30-35 dB).</p>
+            </div>
+            <div class="bg-orange-50 border border-orange-200 rounded-lg p-4">
+              <h4 class="font-bold text-gray-900 mb-2">🧹 Entretien régulier</h4>
+              <p class="text-sm text-gray-700">Nettoyage hebdomadaire (5 min) et ramonage obligatoire 2 fois par an par un professionnel.</p>
+            </div>
+            <div class="bg-orange-50 border border-orange-200 rounded-lg p-4">
+              <h4 class="font-bold text-gray-900 mb-2">📦 Stockage des granulés</h4>
+              <p class="text-sm text-gray-700">Nécessite un espace de stockage au sec pour les sacs de granulés (environ 2-3 tonnes par an pour une maison de 100 m²).</p>
+            </div>
+            <div class="bg-orange-50 border border-orange-200 rounded-lg p-4">
+              <h4 class="font-bold text-gray-900 mb-2">🏠 Conduit obligatoire</h4>
+              <p class="text-sm text-gray-700">Installation d'un conduit d'évacuation nécessaire (tubage vertical ou ventouse). Travaux à prévoir si pas de conduit existant.</p>
+            </div>
+          </div>
+
+          <!-- Section 3 -->
+          <h2 id="types" class="text-3xl font-bold text-gray-900 mb-6 mt-12 scroll-mt-20">
+            3. Les différents types de poêles à granulé
+          </h2>
+
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Poêle à convection naturelle vs convection forcée</h3>
+
+          <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-200 rounded-lg">
+              <thead class="bg-gray-100">
+                <tr>
+                  <th class="px-6 py-3 text-left font-bold text-gray-900">Caractéristique</th>
+                  <th class="px-6 py-3 text-left font-bold text-gray-900">Convection naturelle</th>
+                  <th class="px-6 py-3 text-left font-bold text-gray-900">Convection forcée</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr>
+                  <td class="px-6 py-4 font-medium">Diffusion chaleur</td>
+                  <td class="px-6 py-4">Naturelle (air chaud monte)</td>
+                  <td class="px-6 py-4">Ventilateurs</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 font-medium">Niveau sonore</td>
+                  <td class="px-6 py-4">Très silencieux</td>
+                  <td class="px-6 py-4">35-45 dB</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 font-medium">Rapidité chauffe</td>
+                  <td class="px-6 py-4">Lente</td>
+                  <td class="px-6 py-4">Rapide</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 font-medium">Homogénéité</td>
+                  <td class="px-6 py-4">Moyenne</td>
+                  <td class="px-6 py-4">Excellente</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 font-medium">Prix</td>
+                  <td class="px-6 py-4">Plus élevé</td>
+                  <td class="px-6 py-4">Standard</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Poêle étanche vs non étanche</h3>
+
+          <p class="text-gray-700 mb-4">
+            <strong>Poêle étanche</strong> : Prélève l'air de combustion directement à l'extérieur via une prise d'air dédiée. <strong>Obligatoire dans les constructions RT2012 et BBC</strong>. Avantages : meilleur rendement (jusqu'à 95%), préserve la qualité de l'air intérieur, plus sûr.
+          </p>
+
+          <p class="text-gray-700 mb-6">
+            <strong>Poêle non étanche</strong> : Prélève l'air dans la pièce. Convient aux maisons anciennes avec bonne ventilation. Nécessite une arrivée d'air dans la pièce.
+          </p>
+
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Poêle canalisable</h3>
+
+          <p class="text-gray-700 mb-6">
+            Équipé de gaines pour distribuer l'air chaud dans plusieurs pièces (jusqu'à 3 pièces). Idéal pour chauffer une maison à étage ou plusieurs pièces éloignées. Surcoût : 500€ à 1 500€.
+          </p>
+
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Poêle bouilleur (hydro)</h3>
+
+          <p class="text-gray-700 mb-6">
+            Se raccorde au système de chauffage central (radiateurs, plancher chauffant). Chauffe l'eau du circuit et peut produire l'eau chaude sanitaire. Plus cher (6 000€ à 12 000€) mais peut chauffer toute la maison.
+          </p>
+
+          <!-- Section 4 -->
+          <h2 id="choisir" class="text-3xl font-bold text-gray-900 mb-6 mt-12 scroll-mt-20">
+            4. Comment choisir son poêle à granulé ?
+          </h2>
+
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Critère 1 : La puissance nécessaire</h3>
+
+          <div class="bg-blue-50 border-l-4 border-blue-600 p-6 mb-6">
+            <p class="font-bold text-gray-900 mb-3">Calcul de la puissance :</p>
+            <ul class="space-y-2 text-gray-700">
+              <li>• <strong>Maison RT2012/BBC bien isolée</strong> : 1 kW pour 10 m²</li>
+              <li>• <strong>Maison isolation moyenne</strong> : 1 kW pour 7-8 m²</li>
+              <li>• <strong>Maison mal isolée</strong> : 1 kW pour 5-6 m²</li>
+            </ul>
+            <div class="mt-4 p-4 bg-white rounded-lg">
+              <p class="font-bold text-gray-900 mb-2">Exemples :</p>
+              <ul class="space-y-1 text-sm text-gray-700">
+                <li>• 60 m² bien isolée = <strong>6 kW</strong></li>
+                <li>• 100 m² isolation moyenne = <strong>12-13 kW</strong></li>
+                <li>• 150 m² bien isolée = <strong>15 kW</strong></li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="text-gray-700 mb-6">
+            ⚠️ <strong>Attention</strong> : Un poêle surdimensionné tournera au ralenti, encrassera plus vite et consommera plus. Un poêle sous-dimensionné fonctionnera à pleine puissance en permanence et s'usera prématurément.
+          </p>
+
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Critère 2 : Le rendement</h3>
+
+          <p class="text-gray-700 mb-6">
+            Privilégiez un rendement <strong>≥ 87%</strong> (obligatoire pour MaPrimeRénov'). Les meilleurs modèles atteignent 95%. Plus le rendement est élevé, plus vous économisez de granulés.
+          </p>
+
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Critère 3 : Le label Flamme Verte</h3>
+
+          <p class="text-gray-700 mb-6">
+            Le label <strong>Flamme Verte 7 étoiles</strong> garantit les meilleures performances énergétiques et environnementales. Obligatoire pour la Prime CEE.
+          </p>
+
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Critère 4 : Le niveau sonore</h3>
+
+          <ul class="space-y-2 text-gray-700 mb-6">
+            <li>• <strong>Modèles standards</strong> : 40-45 dB (équivalent à une conversation calme)</li>
+            <li>• <strong>Modèles silencieux</strong> : 35-38 dB (marques haut de gamme)</li>
+            <li>• <strong>Poêles à convection naturelle</strong> : 30-32 dB (les plus silencieux)</li>
+          </ul>
+
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Critère 5 : La capacité du réservoir</h3>
+
+          <ul class="space-y-2 text-gray-700 mb-6">
+            <li>• <strong>Petit réservoir (15 kg)</strong> : 1 jour d'autonomie</li>
+            <li>• <strong>Réservoir moyen (20-25 kg)</strong> : 1,5 à 2 jours</li>
+            <li>• <strong>Grand réservoir (30-35 kg)</strong> : 2 à 3 jours</li>
+          </ul>
+
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Critère 6 : Les fonctionnalités</h3>
+
+          <div class="bg-gray-50 rounded-lg p-6 mb-6">
+            <p class="font-bold text-gray-900 mb-3">Fonctions essentielles :</p>
+            <ul class="space-y-2 text-gray-700">
+              <li>✅ <strong>Programmation hebdomadaire</strong> : Indispensable pour optimiser la consommation</li>
+              <li>✅ <strong>Thermostat intégré</strong> : Régulation automatique de la température</li>
+              <li>✅ <strong>Nettoyage automatique</strong> : Réduit l'entretien manuel</li>
+              <li>🔧 <strong>Connexion Wi-Fi</strong> : Contrôle à distance via smartphone (optionnel)</li>
+              <li>🔧 <strong>Télécommande</strong> : Confort d'utilisation (optionnel)</li>
+            </ul>
+          </div>
+
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Critère 7 : Le design et l'intégration</h3>
+
+          <p class="text-gray-700 mb-6">
+            Large choix de styles : moderne, traditionnel, design scandinave, etc. Finitions : acier, céramique, pierre ollaire. Couleurs : noir, blanc, gris, bordeaux...
+          </p>
+
+          <!-- Section 5 -->
+          <h2 id="marques" class="text-3xl font-bold text-gray-900 mb-6 mt-12 scroll-mt-20">
+            5. Les meilleures marques de poêles à granulé
+          </h2>
+
+          <p class="text-gray-700 mb-6">
+            Découvrez notre <a href="/marques" class="text-primary-600 hover:text-primary-800 font-bold">comparatif détaillé des marques</a> pour faire le bon choix. Voici un résumé des leaders du marché :
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-8">
+            <div class="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-primary-500 transition-colors">
+              <h4 class="text-xl font-bold text-gray-900 mb-2">🇦🇹 Rika</h4>
+              <p class="text-gray-600 mb-3">Marque autrichienne haut de gamme. Rendement > 95%, qualité exceptionnelle, design soigné.</p>
+              <p class="text-sm"><strong>Prix :</strong> 4 000€ - 9 000€</p>
+              <p class="text-sm"><strong>Note :</strong> ⭐ 4.9/5</p>
+            </div>
+
+            <div class="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-primary-500 transition-colors">
+              <h4 class="text-xl font-bold text-gray-900 mb-2">🇮🇹 MCZ</h4>
+              <p class="text-gray-600 mb-3">Innovation italienne, technologie No Air, design primé, très silencieux.</p>
+              <p class="text-sm"><strong>Prix :</strong> 3 200€ - 7 500€</p>
+              <p class="text-sm"><strong>Note :</strong> ⭐ 4.8/5</p>
+            </div>
+
+            <div class="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-primary-500 transition-colors">
+              <h4 class="text-xl font-bold text-gray-900 mb-2">🇮🇹 Palazzetti</h4>
+              <p class="text-gray-600 mb-3">Design haut de gamme, nettoyage automatique, Wi-Fi, excellent rapport qualité/prix premium.</p>
+              <p class="text-sm"><strong>Prix :</strong> 3 500€ - 8 000€</p>
+              <p class="text-sm"><strong>Note :</strong> ⭐ 4.8/5</p>
+            </div>
+
+            <div class="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-primary-500 transition-colors">
+              <h4 class="text-xl font-bold text-gray-900 mb-2">🇮🇹 Extraflame</h4>
+              <p class="text-gray-600 mb-3">Leader européen, large gamme, technologie Maestro+, bon rapport qualité-prix.</p>
+              <p class="text-sm"><strong>Prix :</strong> 2 800€ - 6 500€</p>
+              <p class="text-sm"><strong>Note :</strong> ⭐ 4.7/5</p>
+            </div>
+
+            <div class="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-primary-500 transition-colors">
+              <h4 class="text-xl font-bold text-gray-900 mb-2">🇫🇷 Invicta</h4>
+              <p class="text-gray-600 mb-3">Fabricant français, robuste, fiable, prix attractifs, SAV de proximité.</p>
+              <p class="text-sm"><strong>Prix :</strong> 2 200€ - 4 800€</p>
+              <p class="text-sm"><strong>Note :</strong> ⭐ 4.5/5</p>
+            </div>
+
+            <div class="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-primary-500 transition-colors">
+              <h4 class="text-xl font-bold text-gray-900 mb-2">🇮🇹 Edilkamin</h4>
+              <p class="text-gray-600 mb-3">Italien, excellent rapport qualité-prix, fiable, large choix de modèles.</p>
+              <p class="text-sm"><strong>Prix :</strong> 2 500€ - 5 500€</p>
+              <p class="text-sm"><strong>Note :</strong> ⭐ 4.6/5</p>
+            </div>
+          </div>
+
+          <div class="text-center mb-8">
+            <a href="/marques" class="inline-flex items-center space-x-2 bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+              <span>Voir le comparatif complet des marques</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- Section 6 -->
+          <h2 id="prix" class="text-3xl font-bold text-gray-900 mb-6 mt-12 scroll-mt-20">
+            6. Prix d'achat et d'installation
+          </h2>
+
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Prix du poêle seul</h3>
+
+          <div class="overflow-x-auto mb-8">
+            <table class="min-w-full bg-white border border-gray-200 rounded-lg">
+              <thead class="bg-gray-100">
+                <tr>
+                  <th class="px-6 py-3 text-left font-bold text-gray-900">Gamme</th>
+                  <th class="px-6 py-3 text-left font-bold text-gray-900">Prix</th>
+                  <th class="px-6 py-3 text-left font-bold text-gray-900">Caractéristiques</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr>
+                  <td class="px-6 py-4 font-medium">Entrée de gamme</td>
+                  <td class="px-6 py-4">2 000€ - 3 500€</td>
+                  <td class="px-6 py-4">Fonctions basiques, rendement correct (~87%)</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 font-medium">Milieu de gamme</td>
+                  <td class="px-6 py-4">3 500€ - 5 500€</td>
+                  <td class="px-6 py-4">Bon rendement (90-92%), programmation, design soigné</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 font-medium">Haut de gamme</td>
+                  <td class="px-6 py-4">5 500€ - 9 000€</td>
+                  <td class="px-6 py-4">Rendement optimal (>93%), Wi-Fi, très silencieux, design premium</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Coût de l'installation</h3>
+
+          <ul class="space-y-2 text-gray-700 mb-6">
+            <li>• <strong>Main d'œuvre installation RGE</strong> : 1 000€ - 2 000€</li>
+            <li>• <strong>Tubage du conduit</strong> (si nécessaire) : 500€ - 1 500€</li>
+            <li>• <strong>Installation ventouse</strong> : 800€ - 1 200€</li>
+            <li>• <strong>Raccordement électrique</strong> : Inclus généralement</li>
+            <li>• <strong>Mise en service et formation</strong> : Inclus</li>
+          </ul>
+
+          <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-8">
+            <h4 class="font-bold text-gray-900 mb-3">💰 Coût total moyen :</h4>
+            <ul class="space-y-2 text-gray-700">
+              <li>• <strong>Installation complète entrée de gamme</strong> : 4 000€ - 6 000€</li>
+              <li>• <strong>Installation complète milieu de gamme</strong> : 6 000€ - 8 500€</li>
+              <li>• <strong>Installation complète haut de gamme</strong> : 8 500€ - 12 000€</li>
+            </ul>
+          </div>
+
+          <p class="text-gray-700 mb-6">
+            <a href="/prix-installation" class="text-primary-600 hover:text-primary-800 font-bold">Consultez notre guide détaillé des prix d'installation</a> pour plus d'informations et des exemples concrets.
+          </p>
+
+          <!-- Section 7 -->
+          <h2 id="aides" class="text-3xl font-bold text-gray-900 mb-6 mt-12 scroll-mt-20">
+            7. Aides financières 2024
+          </h2>
+
+          <p class="text-gray-700 mb-6">
+            Les aides peuvent réduire le coût d'installation de <strong>40 à 60%</strong>. Jusqu'à <strong>3 500€ d'aides cumulables</strong> :
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-8">
+            <div class="bg-gradient-to-br from-green-50 to-green-100 border-2 border-green-300 rounded-lg p-6">
+              <h4 class="text-xl font-bold text-gray-900 mb-2">🏛️ MaPrimeRénov'</h4>
+              <p class="text-2xl font-bold text-green-700 mb-2">Jusqu'à 2 500€</p>
+              <ul class="text-sm text-gray-700 space-y-1">
+                <li>• Montant selon vos revenus</li>
+                <li>• Versée par l'Anah</li>
+                <li>• Installation RGE obligatoire</li>
+              </ul>
+            </div>
+
+            <div class="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-300 rounded-lg p-6">
+              <h4 class="text-xl font-bold text-gray-900 mb-2">⚡ Prime CEE</h4>
+              <p class="text-2xl font-bold text-blue-700 mb-2">500€ à 1 000€</p>
+              <ul class="text-sm text-gray-700 space-y-1">
+                <li>• Versée par fournisseurs d'énergie</li>
+                <li>• Cumulable avec MaPrimeRénov'</li>
+                <li>• Label Flamme Verte 7* requis</li>
+              </ul>
+            </div>
+
+            <div class="bg-gradient-to-br from-purple-50 to-purple-100 border-2 border-purple-300 rounded-lg p-6">
+              <h4 class="text-xl font-bold text-gray-900 mb-2">🏦 Éco-PTZ</h4>
+              <p class="text-2xl font-bold text-purple-700 mb-2">Jusqu'à 15 000€</p>
+              <ul class="text-sm text-gray-700 space-y-1">
+                <li>• Prêt à taux zéro</li>
+                <li>• Remboursement sur 15 ans max</li>
+                <li>• Sans condition de ressources</li>
+              </ul>
+            </div>
+
+            <div class="bg-gradient-to-br from-orange-50 to-orange-100 border-2 border-orange-300 rounded-lg p-6">
+              <h4 class="text-xl font-bold text-gray-900 mb-2">💰 TVA réduite 5,5%</h4>
+              <p class="text-2xl font-bold text-orange-700 mb-2">Économie ~500€</p>
+              <ul class="text-sm text-gray-700 space-y-1">
+                <li>• Au lieu de 20%</li>
+                <li>• Sur matériel et pose</li>
+                <li>• Automatique si éligible</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="text-center mb-8">
+            <a href="/aides-financieres" class="inline-flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+              <span>Guide complet des aides financières 2024</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- Section 8 -->
+          <h2 id="installation" class="text-3xl font-bold text-gray-900 mb-6 mt-12 scroll-mt-20">
+            8. Le processus d'installation
+          </h2>
+
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Étapes de l'installation</h3>
+
+          <div class="space-y-6 mb-8">
+            <div class="flex items-start space-x-4 bg-white border-l-4 border-primary-600 p-6 rounded-r-lg shadow-sm">
+              <div class="flex-shrink-0 w-10 h-10 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold">1</div>
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2">Visite technique préalable</h4>
+                <p class="text-gray-700">Étude de votre logement, mesures, choix de l'emplacement, vérification du conduit existant ou définition du type d'évacuation (tubage vertical ou ventouse).</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4 bg-white border-l-4 border-primary-600 p-6 rounded-r-lg shadow-sm">
+              <div class="flex-shrink-0 w-10 h-10 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold">2</div>
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2">Préparation du conduit</h4>
+                <p class="text-gray-700">Tubage du conduit existant ou création d'une sortie en ventouse. Installation de la prise d'air extérieure pour poêle étanche.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4 bg-white border-l-4 border-primary-600 p-6 rounded-r-lg shadow-sm">
+              <div class="flex-shrink-0 w-10 h-10 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold">3</div>
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2">Pose du poêle</h4>
+                <p class="text-gray-700">Installation du poêle sur son socle, raccordement au conduit d'évacuation, raccordement électrique, installation du thermostat.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4 bg-white border-l-4 border-primary-600 p-6 rounded-r-lg shadow-sm">
+              <div class="flex-shrink-0 w-10 h-10 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold">4</div>
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2">Tests et mise en service</h4>
+                <p class="text-gray-700">Tests de sécurité, vérification de l'étanchéité, test d'allumage, réglages de combustion optimale, contrôle du tirage.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4 bg-white border-l-4 border-primary-600 p-6 rounded-r-lg shadow-sm">
+              <div class="flex-shrink-0 w-10 h-10 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold">5</div>
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2">Formation et remise de documents</h4>
+                <p class="text-gray-700">Explication du fonctionnement, programmation, entretien courant. Remise de l'attestation RGE, notice, certificat de conformité.</p>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Normes et réglementations</h3>
+
+          <ul class="space-y-2 text-gray-700 mb-6">
+            <li>• <strong>Norme DTU 24.1</strong> : Règles de l'art pour l'installation</li>
+            <li>• <strong>Distance de sécurité</strong> : 3x le diamètre du conduit par rapport aux matériaux combustibles</li>
+            <li>• <strong>Hauteur minimale conduit</strong> : 3,50 m à 4 m selon configuration</li>
+            <li>• <strong>Arrivée d'air</strong> : Obligatoire (50-100 cm² selon puissance)</li>
+            <li>• <strong>Ramonage obligatoire</strong> : 2 fois par an dont 1 fois pendant la période de chauffe</li>
+          </ul>
+
+          <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-8">
+            <p class="font-bold text-gray-900 mb-2">⚠️ Important</p>
+            <p class="text-gray-700">L'installation doit obligatoirement être réalisée par un <strong>professionnel RGE Qualibois</strong> pour :</p>
+            <ul class="mt-2 space-y-1 text-gray-700">
+              <li>✓ Garantir la sécurité et la conformité</li>
+              <li>✓ Bénéficier des aides financières</li>
+              <li>✓ Obtenir un certificat de conformité</li>
+              <li>✓ Assurer la garantie constructeur</li>
+            </ul>
+          </div>
+
+          <!-- Section 9 -->
+          <h2 id="entretien" class="text-3xl font-bold text-gray-900 mb-6 mt-12 scroll-mt-20">
+            9. Entretien et maintenance
+          </h2>
+
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Entretien courant (par l'utilisateur)</h3>
+
+          <div class="grid md:grid-cols-3 gap-6 mb-8">
+            <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h4 class="font-bold text-gray-900 mb-3">🔥 Quotidien</h4>
+              <ul class="space-y-2 text-sm text-gray-700">
+                <li>• Vérifier le niveau de granulés</li>
+                <li>• Observer la flamme (doit être vive et claire)</li>
+              </ul>
+              <p class="text-xs text-gray-500 mt-3">Temps : 1 minute</p>
+            </div>
+
+            <div class="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h4 class="font-bold text-gray-900 mb-3">🧹 Hebdomadaire</h4>
+              <ul class="space-y-2 text-sm text-gray-700">
+                <li>• Nettoyer le creuset (grattage)</li>
+                <li>• Nettoyer la vitre</li>
+                <li>• Vider le cendrier</li>
+              </ul>
+              <p class="text-xs text-gray-500 mt-3">Temps : 5-10 minutes</p>
+            </div>
+
+            <div class="bg-orange-50 border border-orange-200 rounded-lg p-6">
+              <h4 class="font-bold text-gray-900 mb-3">🔧 Mensuel</h4>
+              <ul class="space-y-2 text-sm text-gray-700">
+                <li>• Aspirer les conduits internes</li>
+                <li>• Nettoyer l'échangeur de chaleur</li>
+                <li>• Vérifier les joints</li>
+              </ul>
+              <p class="text-xs text-gray-500 mt-3">Temps : 20-30 minutes</p>
+            </div>
+          </div>
+
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Entretien professionnel obligatoire</h3>
+
+          <div class="bg-red-50 border-2 border-red-300 rounded-lg p-6 mb-6">
+            <h4 class="font-bold text-gray-900 mb-3">🔴 Ramonage obligatoire : 2 fois par an</h4>
+            <p class="text-gray-700 mb-4">
+              La réglementation impose <strong>2 ramonages annuels</strong> dont au moins 1 pendant la période de chauffe. Le ramonage doit être effectué par un professionnel certifié qui délivre un certificat de ramonage (obligatoire pour l'assurance).
+            </p>
+            <p class="text-sm text-gray-600">
+              <strong>Coût :</strong> 80€ à 150€ par ramonage
+            </p>
+          </div>
+
+          <div class="bg-purple-50 border-2 border-purple-300 rounded-lg p-6 mb-8">
+            <h4 class="font-bold text-gray-900 mb-3">🔧 Entretien annuel complet (recommandé)</h4>
+            <p class="text-gray-700 mb-4">
+              Un entretien annuel par un technicien spécialisé prolonge la durée de vie de votre poêle et optimise ses performances :
+            </p>
+            <ul class="space-y-2 text-sm text-gray-700 mb-4">
+              <li>✓ Nettoyage complet du poêle et des conduits</li>
+              <li>✓ Vérification et remplacement des joints si nécessaire</li>
+              <li>✓ Contrôle des sondes et capteurs</li>
+              <li>✓ Vérification du moteur et de la vis sans fin</li>
+              <li>✓ Réglage de la combustion</li>
+              <li>✓ Tests de sécurité</li>
+            </ul>
+            <p class="text-sm text-gray-600">
+              <strong>Coût :</strong> 150€ à 250€ (ramonage souvent inclus)
+            </p>
+          </div>
+
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Durée de vie et pièces d'usure</h3>
+
+          <p class="text-gray-700 mb-4">
+            <strong>Durée de vie moyenne d'un poêle à granulé</strong> : 15 à 20 ans avec un bon entretien.
+          </p>
+
+          <p class="text-gray-700 mb-6">
+            <strong>Pièces d'usure à remplacer</strong> (selon utilisation) :
+          </p>
+
+          <ul class="space-y-2 text-gray-700 mb-8">
+            <li>• <strong>Joints de porte</strong> : tous les 2-3 ans (20€-40€)</li>
+            <li>• <strong>Bougie d'allumage</strong> : tous les 3-5 ans (30€-60€)</li>
+            <li>• <strong>Moteur de vis sans fin</strong> : 8-12 ans (150€-300€)</li>
+            <li>• <strong>Ventilateur</strong> : 8-12 ans (100€-250€)</li>
+            <li>• <strong>Sondes de température</strong> : 5-8 ans (40€-80€)</li>
+          </ul>
+
+          <!-- Section 10 -->
+          <h2 id="granules" class="text-3xl font-bold text-gray-900 mb-6 mt-12 scroll-mt-20">
+            10. Tout sur les granulés de bois (pellets)
+          </h2>
+
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Qu'est-ce qu'un granulé de bois ?</h3>
+
+          <p class="text-gray-700 mb-6">
+            Les granulés (ou pellets) sont de <strong>petits cylindres de sciure de bois compressée</strong> (6-8 mm de diamètre, 10-30 mm de longueur) sans additif ni colle. Ils sont fabriqués à partir de <strong>résidus de scieries</strong> (sciure, copeaux) compactés à haute pression. Le bois libère naturellement de la lignine qui agit comme liant naturel.
+          </p>
+
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Choisir des granulés de qualité</h3>
+
+          <p class="text-gray-700 mb-4">
+            Privilégiez les granulés certifiés pour garantir performance et préserver votre poêle :
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-8">
+            <div class="bg-green-50 border-2 border-green-300 rounded-lg p-6">
+              <h4 class="font-bold text-gray-900 mb-3">🏅 Certification DIN Plus</h4>
+              <p class="text-sm text-gray-700 mb-3">Norme allemande, la plus exigeante :</p>
+              <ul class="space-y-1 text-xs text-gray-700">
+                <li>• Taux d'humidité ≤ 10%</li>
+                <li>• Taux de cendres ≤ 0,7%</li>
+                <li>• Pouvoir calorifique ≥ 4,6 kWh/kg</li>
+                <li>• Densité élevée</li>
+              </ul>
+            </div>
+
+            <div class="bg-blue-50 border-2 border-blue-300 rounded-lg p-6">
+              <h4 class="font-bold text-gray-900 mb-3">🏅 Certification EN Plus A1</h4>
+              <p class="text-sm text-gray-700 mb-3">Norme européenne :</p>
+              <ul class="space-y-1 text-xs text-gray-700">
+                <li>• Taux d'humidité ≤ 10%</li>
+                <li>• Taux de cendres ≤ 0,7%</li>
+                <li>• Pouvoir calorifique ≥ 4,6 kWh/kg</li>
+                <li>• Traçabilité garantie</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-6">
+            <p class="font-bold text-gray-900 mb-2">⚠️ Évitez les granulés bas de gamme</p>
+            <p class="text-gray-700">
+              Des granulés de mauvaise qualité (trop humides, trop de cendres, poussières) peuvent :
+            </p>
+            <ul class="mt-2 space-y-1 text-gray-700">
+              <li>❌ Encrasser rapidement votre poêle</li>
+              <li>❌ Réduire le rendement</li>
+              <li>❌ Provoquer des pannes</li>
+              <li>❌ Augmenter la fréquence d'entretien</li>
+            </ul>
+          </div>
+
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Prix et consommation</h3>
+
+          <div class="bg-white border border-gray-200 rounded-lg p-6 mb-6">
+            <h4 class="font-bold text-gray-900 mb-4">💰 Prix des granulés (2024)</h4>
+            <ul class="space-y-2 text-gray-700">
+              <li>• <strong>Sac de 15 kg</strong> : 5€ à 7€ (selon qualité et saison)</li>
+              <li>• <strong>Palette de 1 tonne</strong> (66 sacs) : 320€ à 450€</li>
+              <li>• <strong>Livraison en vrac</strong> (3-5 tonnes) : 300€ à 400€ la tonne</li>
+            </ul>
+            <p class="text-sm text-gray-600 mt-4">
+              💡 <strong>Astuce</strong> : Achetez en été pour bénéficier des meilleurs prix (hors saison de chauffe)
+            </p>
+          </div>
+
+          <div class="bg-primary-50 border-l-4 border-primary-600 p-6 mb-6">
+            <h4 class="font-bold text-gray-900 mb-4">📊 Consommation moyenne</h4>
+            <ul class="space-y-2 text-gray-700">
+              <li>• <strong>Maison 100 m² bien isolée</strong> : 2 à 3 tonnes par an (600€ à 1 200€/an)</li>
+              <li>• <strong>Maison 100 m² isolation moyenne</strong> : 3 à 4 tonnes par an (900€ à 1 600€/an)</li>
+              <li>• <strong>Maison 150 m² bien isolée</strong> : 3 à 4,5 tonnes par an (900€ à 1 800€/an)</li>
+            </ul>
+            <p class="text-sm text-gray-600 mt-4">
+              La consommation dépend de : l'isolation, la température souhaitée, le climat, la puissance du poêle
+            </p>
+          </div>
+
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Stockage des granulés</h3>
+
+          <p class="text-gray-700 mb-4">
+            <strong>Conditions de stockage essentielles</strong> :
+          </p>
+
+          <ul class="space-y-2 text-gray-700 mb-8">
+            <li>✓ <strong>Au sec</strong> : Garage, cave, abri. L'humidité rend les granulés inutilisables</li>
+            <li>✓ <strong>À l'abri de la lumière</strong> : Évite la dégradation</li>
+            <li>✓ <strong>Sur palette</strong> : Évite le contact avec le sol</li>
+            <li>✓ <strong>Bonne ventilation</strong> : Évite la condensation</li>
+            <li>✓ <strong>Accessible</strong> : Facilite le rechargement du poêle</li>
+          </ul>
+
+          <div class="bg-green-50 border-2 border-green-300 rounded-lg p-6 mb-8">
+            <p class="font-bold text-gray-900 mb-2">🌱 Écologie</p>
+            <p class="text-gray-700">
+              Les granulés sont une énergie <strong>100% renouvelable et neutre en carbone</strong>. Le CO2 émis lors de la combustion est équivalent à celui que l'arbre aurait naturellement libéré en se décomposant. De plus, les granulés sont fabriqués à partir de déchets de scierie, valorisant ainsi des résidus qui seraient autrement perdus.
+            </p>
+          </div>
+
+        </article>
+
+        <!-- CTA Final -->
+        <div class="bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-2xl p-8 mt-12 text-center">
+          <h2 class="text-3xl font-bold mb-4">
+            Prêt à passer au poêle à granulé ?
+          </h2>
+          <p class="text-xl mb-8">
+            Obtenez votre devis gratuit et personnalisé sous 24h
+          </p>
+          <a
+            href="#devis"
+            class="inline-flex items-center space-x-2 bg-white hover:bg-gray-100 text-primary-600 px-10 py-4 rounded-lg font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300"
+          >
+            <span>Demander mon devis gratuit</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <QuoteForm />
+</BaseLayout>
+
+<script>
+  // Smooth scroll for anchor links
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href && href !== '#') {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        }
+      });
+    });
+  });
+</script>

@@ -1,0 +1,208 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { siteConfig } from '../data/seo';
+---
+
+<BaseLayout
+  title="Politique de Confidentialité - RGPD | Installateur Poêle à Granulé"
+  description="Politique de confidentialité et protection des données personnelles - RGPD. Comment nous collectons, utilisons et protégeons vos données."
+>
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto prose prose-lg">
+        <h1 class="text-4xl font-display font-bold text-gray-900 mb-8">Politique de Confidentialité</h1>
+
+        <div class="bg-blue-50 border-l-4 border-blue-600 p-6 mb-8">
+          <p class="font-semibold">
+            {siteConfig.name} s'engage à protéger votre vie privée et vos données personnelles conformément au Règlement Général sur la Protection des Données (RGPD).
+          </p>
+        </div>
+
+        <h2>1. Responsable du traitement des données</h2>
+        <p><strong>Raison sociale :</strong> {siteConfig.name}</p>
+        <p><strong>Email :</strong> {siteConfig.contactEmail}</p>
+        <p><strong>Téléphone :</strong> {siteConfig.contactPhone}</p>
+
+        <h2>2. Données personnelles collectées</h2>
+        <p>Nous collectons les données personnelles suivantes lorsque vous utilisez notre site :</p>
+
+        <h3>2.1 Formulaire de contact et devis</h3>
+        <ul>
+          <li>Nom et prénom</li>
+          <li>Adresse email</li>
+          <li>Numéro de téléphone</li>
+          <li>Adresse postale ou ville</li>
+          <li>Informations sur votre projet (surface, type de logement, etc.)</li>
+        </ul>
+
+        <h3>2.2 Données de navigation</h3>
+        <ul>
+          <li>Adresse IP</li>
+          <li>Pages visitées</li>
+          <li>Durée de navigation</li>
+          <li>Type de navigateur utilisé</li>
+        </ul>
+
+        <h2>3. Finalités du traitement</h2>
+        <p>Vos données personnelles sont collectées pour les finalités suivantes :</p>
+        <ul>
+          <li><strong>Traitement de vos demandes :</strong> Répondre à vos demandes de devis, de contact ou de renseignements</li>
+          <li><strong>Service client :</strong> Assurer le suivi de votre projet et vous apporter un service personnalisé</li>
+          <li><strong>Amélioration de nos services :</strong> Analyser l'utilisation de notre site pour améliorer l'expérience utilisateur</li>
+          <li><strong>Communication commerciale :</strong> Vous envoyer des informations sur nos services (avec votre consentement)</li>
+          <li><strong>Obligations légales :</strong> Respecter nos obligations légales et réglementaires</li>
+        </ul>
+
+        <h2>4. Base légale du traitement</h2>
+        <p>Le traitement de vos données repose sur :</p>
+        <ul>
+          <li><strong>Votre consentement :</strong> Pour l'envoi de communications commerciales</li>
+          <li><strong>L'exécution d'un contrat :</strong> Pour le traitement de vos demandes de devis et prestations</li>
+          <li><strong>Intérêt légitime :</strong> Pour l'amélioration de nos services et la sécurité du site</li>
+          <li><strong>Obligation légale :</strong> Pour le respect de nos obligations fiscales et comptables</li>
+        </ul>
+
+        <h2>5. Durée de conservation</h2>
+        <p>Vos données personnelles sont conservées pendant les durées suivantes :</p>
+        <ul>
+          <li><strong>Demandes de devis :</strong> 3 ans à compter de la dernière interaction</li>
+          <li><strong>Clients :</strong> 10 ans pour les obligations comptables et fiscales</li>
+          <li><strong>Données de navigation :</strong> 13 mois maximum</li>
+          <li><strong>Consentement marketing :</strong> 3 ans, révocable à tout moment</li>
+        </ul>
+
+        <h2>6. Destinataires des données</h2>
+        <p>Vos données personnelles peuvent être transmises à :</p>
+        <ul>
+          <li>Notre équipe interne pour le traitement de vos demandes</li>
+          <li>Nos installateurs partenaires certifiés RGE dans votre zone géographique</li>
+          <li>Nos prestataires techniques (hébergement, emailing) sous contrat de confidentialité</li>
+          <li>Les organismes d'aides financières (Anah, fournisseurs d'énergie) si vous en faites la demande</li>
+          <li>Les autorités administratives et judiciaires en cas d'obligation légale</li>
+        </ul>
+        <p><strong>Nous ne vendons jamais vos données personnelles à des tiers.</strong></p>
+
+        <h2>7. Vos droits</h2>
+        <p>Conformément au RGPD, vous disposez des droits suivants :</p>
+
+        <div class="bg-green-50 rounded-lg p-6 my-6">
+          <ul class="space-y-3">
+            <li class="flex items-start space-x-3">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <strong>Droit d'accès :</strong> Obtenir une copie de vos données personnelles
+              </div>
+            </li>
+            <li class="flex items-start space-x-3">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <strong>Droit de rectification :</strong> Corriger des données inexactes ou incomplètes
+              </div>
+            </li>
+            <li class="flex items-start space-x-3">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <strong>Droit à l'effacement :</strong> Demander la suppression de vos données (sous certaines conditions)
+              </div>
+            </li>
+            <li class="flex items-start space-x-3">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <strong>Droit d'opposition :</strong> S'opposer au traitement de vos données à des fins commerciales
+              </div>
+            </li>
+            <li class="flex items-start space-x-3">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <strong>Droit à la limitation :</strong> Limiter le traitement de vos données dans certains cas
+              </div>
+            </li>
+            <li class="flex items-start space-x-3">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <strong>Droit à la portabilité :</strong> Recevoir vos données dans un format structuré
+              </div>
+            </li>
+            <li class="flex items-start space-x-3">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <strong>Droit de retirer votre consentement :</strong> À tout moment pour les traitements basés sur le consentement
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <p><strong>Pour exercer vos droits :</strong></p>
+        <p>Envoyez votre demande par email à : <a href={`mailto:${siteConfig.contactEmail}`} class="text-primary-600 font-semibold">{siteConfig.contactEmail}</a></p>
+        <p>Nous vous répondrons dans un délai maximum d'1 mois.</p>
+
+        <h2>8. Sécurité des données</h2>
+        <p>Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour assurer la sécurité de vos données :</p>
+        <ul>
+          <li>Chiffrement SSL/TLS pour la transmission des données</li>
+          <li>Accès restreint aux données personnelles (équipe autorisée uniquement)</li>
+          <li>Sauvegardes régulières et sécurisées</li>
+          <li>Protection contre les cyberattaques et intrusions</li>
+          <li>Mise à jour régulière des systèmes de sécurité</li>
+        </ul>
+
+        <h2>9. Cookies</h2>
+        <p>Notre site utilise des cookies pour améliorer votre expérience de navigation. Vous pouvez gérer vos préférences de cookies via les paramètres de votre navigateur.</p>
+        <p><strong>Types de cookies utilisés :</strong></p>
+        <ul>
+          <li><strong>Cookies essentiels :</strong> Nécessaires au fonctionnement du site</li>
+          <li><strong>Cookies analytiques :</strong> Pour mesurer l'audience et améliorer le site</li>
+          <li><strong>Cookies fonctionnels :</strong> Pour mémoriser vos préférences</li>
+        </ul>
+
+        <h2>10. Réclamation</h2>
+        <p>
+          Si vous estimez que vos droits ne sont pas respectés, vous pouvez introduire une réclamation auprès de la CNIL :
+        </p>
+        <p>
+          <strong>CNIL</strong><br />
+          3 Place de Fontenoy - TSA 80715<br />
+          75334 PARIS CEDEX 07<br />
+          Tél : 01 53 73 22 22<br />
+          Site web : <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>
+        </p>
+
+        <h2>11. Modifications</h2>
+        <p>
+          Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment.
+          La version en vigueur est celle publiée sur cette page. Nous vous invitons à la consulter régulièrement.
+        </p>
+
+        <div class="bg-primary-50 border-l-4 border-primary-600 p-6 my-8">
+          <p class="font-semibold mb-2">Dernière mise à jour : Janvier 2024</p>
+          <p class="text-sm">
+            Pour toute question concernant cette politique de confidentialité, contactez-nous à {siteConfig.contactEmail}
+          </p>
+        </div>
+
+        <div class="text-center mt-12">
+          <a href="/contact" class="inline-flex items-center space-x-2 bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+            <span>Nous contacter</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

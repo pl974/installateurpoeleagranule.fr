@@ -1,0 +1,270 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { siteConfig } from '../data/seo';
+---
+
+<BaseLayout
+  title="Conditions Générales de Vente (CGV) - Installateur Poêle à Granulé"
+  description="Conditions Générales de Vente pour l'installation de poêles à granulés. Tarifs, modalités de paiement, garanties, obligations."
+>
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto prose prose-lg">
+        <h1 class="text-4xl font-display font-bold text-gray-900 mb-8">Conditions Générales de Vente</h1>
+
+        <div class="bg-blue-50 border-l-4 border-blue-600 p-6 mb-8">
+          <p class="font-semibold">
+            Les présentes Conditions Générales de Vente (CGV) régissent les relations contractuelles entre
+            {siteConfig.name} et ses clients pour toute prestation d'installation de poêles à granulés.
+          </p>
+        </div>
+
+        <h2>Article 1 - Champ d'application</h2>
+        <p>
+          Les présentes CGV s'appliquent à toutes les prestations de services proposées par {siteConfig.name},
+          notamment l'installation, la maintenance et le service après-vente de poêles à granulés.
+        </p>
+        <p>
+          Le fait de passer commande implique l'adhésion entière et sans réserve du client aux présentes CGV,
+          à l'exclusion de tout autre document.
+        </p>
+
+        <h2>Article 2 - Devis</h2>
+        <h3>2.1 Établissement du devis</h3>
+        <p>
+          Tout devis est établi gratuitement et sans engagement. Il est valable pendant 3 mois à compter de sa date d'émission,
+          sauf mention contraire.
+        </p>
+
+        <h3>2.2 Contenu du devis</h3>
+        <p>Le devis comprend :</p>
+        <ul>
+          <li>La description détaillée des équipements et prestations</li>
+          <li>Le prix total TTC</li>
+          <li>Les conditions de paiement</li>
+          <li>Le délai indicatif d'intervention</li>
+          <li>Les aides financières estimées (sous réserve d'éligibilité)</li>
+        </ul>
+
+        <h2>Article 3 - Commande et acceptation</h2>
+        <p>
+          La commande devient ferme et définitive après signature du devis par le client et versement de l'acompte.
+          Le devis signé vaut bon de commande.
+        </p>
+        <p>
+          {siteConfig.name} se réserve le droit de refuser une commande pour un motif légitime
+          (zone non couverte, projet non conforme, etc.).
+        </p>
+
+        <h2>Article 4 - Prix</h2>
+        <h3>4.1 Prix des prestations</h3>
+        <p>
+          Les prix sont indiqués en euros TTC (TVA à 5,5% pour les travaux de rénovation énergétique
+          dans les logements de plus de 2 ans, ou 20% selon les cas).
+        </p>
+        <p>
+          Les prix incluent : fourniture du matériel, main d'œuvre, déplacements dans la zone d'intervention,
+          mise en service et formation à l'utilisation.
+        </p>
+
+        <h3>4.2 Révision des prix</h3>
+        <p>
+          Les prix du devis sont fermes et non révisables pendant la durée de validité du devis.
+          Passé ce délai, les prix peuvent être révisés en fonction de l'évolution du coût des matériaux et de la main d'œuvre.
+        </p>
+
+        <h2>Article 5 - Modalités de paiement</h2>
+        <h3>5.1 Acompte</h3>
+        <p>
+          Un acompte de 30% du montant total TTC est demandé à la signature du devis pour confirmer la commande.
+        </p>
+
+        <h3>5.2 Solde</h3>
+        <p>
+          Le solde est exigible à la fin des travaux, après réception conforme de l'installation.
+        </p>
+
+        <h3>5.3 Moyens de paiement</h3>
+        <p>Les moyens de paiement acceptés sont :</p>
+        <ul>
+          <li>Virement bancaire</li>
+          <li>Chèque</li>
+          <li>Espèces (dans la limite légale)</li>
+          <li>Carte bancaire</li>
+        </ul>
+
+        <h3>5.4 Retard de paiement</h3>
+        <p>
+          Tout retard de paiement entraîne de plein droit, sans mise en demeure préalable :
+        </p>
+        <ul>
+          <li>L'exigibilité immédiate de toutes les sommes dues</li>
+          <li>L'application de pénalités de retard au taux de 3 fois le taux d'intérêt légal</li>
+          <li>Une indemnité forfaitaire de 40€ pour frais de recouvrement</li>
+        </ul>
+
+        <h2>Article 6 - Délais d'exécution</h2>
+        <p>
+          Les délais d'intervention sont indicatifs et donnés à titre informatif.
+          Ils peuvent varier en fonction de la disponibilité des équipements, des conditions météorologiques
+          ou de circonstances exceptionnelles.
+        </p>
+        <p>
+          En cas de retard important, le client en sera informé et pourra, si le retard excède 30 jours,
+          annuler sa commande avec remboursement intégral des sommes versées.
+        </p>
+
+        <h2>Article 7 - Exécution des travaux</h2>
+        <h3>7.1 Visite technique préalable</h3>
+        <p>
+          Une visite technique gratuite est réalisée avant l'installation pour vérifier la faisabilité
+          et définir les modalités d'installation.
+        </p>
+
+        <h3>7.2 Obligations du client</h3>
+        <p>Le client s'engage à :</p>
+        <ul>
+          <li>Fournir un accès libre et sécurisé au lieu d'installation</li>
+          <li>Mettre à disposition l'électricité et l'eau nécessaires</li>
+          <li>Signaler toute contrainte particulière (amiante, etc.)</li>
+          <li>Être présent ou représenté lors de l'installation</li>
+        </ul>
+
+        <h3>7.3 Installation conforme</h3>
+        <p>
+          Tous nos travaux sont réalisés conformément aux normes en vigueur (DTU 24.1, réglementation RGE Qualibois).
+          Un certificat de conformité est délivré à l'issue des travaux.
+        </p>
+
+        <h2>Article 8 - Réception des travaux</h2>
+        <p>
+          À la fin de l'installation, un procès-verbal de réception est établi et signé par les deux parties.
+          Le client dispose d'un délai de 24h pour formuler des réserves motivées par écrit.
+        </p>
+        <p>
+          Passé ce délai, la réception est considérée comme définitive, sauf vice caché.
+        </p>
+
+        <h2>Article 9 - Garanties</h2>
+        <h3>9.1 Garantie légale de conformité</h3>
+        <p>
+          Le client bénéficie de la garantie légale de conformité pendant 2 ans à compter de la livraison
+          (articles L217-4 à L217-14 du Code de la consommation).
+        </p>
+
+        <h3>9.2 Garantie des vices cachés</h3>
+        <p>
+          Le client bénéficie également de la garantie des vices cachés pendant 2 ans à compter de la découverte du vice
+          (articles 1641 à 1649 du Code civil).
+        </p>
+
+        <h3>9.3 Garantie constructeur</h3>
+        <p>
+          Les poêles installés bénéficient de la garantie constructeur (généralement 2 ans, jusqu'à 3 ans selon les marques).
+          La garantie constructeur couvre les pièces et la main d'œuvre selon les conditions définies par le fabricant.
+        </p>
+
+        <h3>9.4 Garantie décennale</h3>
+        <p>
+          {siteConfig.name} est couvert par une assurance responsabilité civile décennale pour tous ses travaux
+          d'installation conformément à l'article L241-1 du Code des assurances.
+        </p>
+
+        <h2>Article 10 - Aides financières</h2>
+        <p>
+          {siteConfig.name} vous accompagne dans vos démarches pour obtenir les aides financières
+          (MaPrimeRénov', Prime CEE, etc.). Toutefois, l'obtention effective des aides reste conditionnée
+          à votre éligibilité et à l'acceptation de votre dossier par les organismes compétents.
+        </p>
+        <p>
+          {siteConfig.name} ne peut être tenu responsable en cas de refus ou de retard de versement des aides.
+        </p>
+
+        <h2>Article 11 - Droit de rétractation</h2>
+        <p>
+          Conformément à l'article L221-28 du Code de la consommation, le client dispose d'un délai de rétractation de 14 jours
+          à compter de la signature du devis.
+        </p>
+        <p>
+          Ce droit de rétractation peut être exercé par courrier recommandé avec accusé de réception ou par email à :
+          {siteConfig.contactEmail}
+        </p>
+        <p>
+          <strong>Exception :</strong> Le droit de rétractation ne s'applique pas si le client demande expressément
+          le commencement des travaux avant l'expiration du délai de 14 jours.
+        </p>
+
+        <h2>Article 12 - Responsabilité</h2>
+        <p>
+          {siteConfig.name} est responsable de la bonne exécution des travaux conformément aux règles de l'art
+          et aux normes en vigueur.
+        </p>
+        <p>
+          Notre responsabilité ne saurait être engagée en cas de :
+        </p>
+        <ul>
+          <li>Non-respect des consignes d'utilisation et d'entretien</li>
+          <li>Modification ou intervention sur l'installation par un tiers non autorisé</li>
+          <li>Utilisation de granulés non conformes aux spécifications</li>
+          <li>Défaut d'entretien (ramonage non effectué)</li>
+          <li>Force majeure</li>
+        </ul>
+
+        <h2>Article 13 - Service après-vente et entretien</h2>
+        <p>
+          {siteConfig.name} propose des contrats d'entretien annuel incluant :
+        </p>
+        <ul>
+          <li>Nettoyage complet de l'appareil</li>
+          <li>Vérification des composants</li>
+          <li>Ramonage du conduit (2 fois par an)</li>
+          <li>Réglage de la combustion</li>
+        </ul>
+        <p>
+          Pour toute demande de SAV, contactez-nous au {siteConfig.contactPhone} ou par email à {siteConfig.contactEmail}.
+        </p>
+
+        <h2>Article 14 - Protection des données personnelles</h2>
+        <p>
+          Les données personnelles collectées font l'objet d'un traitement conforme au RGPD.
+          Pour plus d'informations, consultez notre <a href="/politique-confidentialite">Politique de Confidentialité</a>.
+        </p>
+
+        <h2>Article 15 - Droit applicable et litiges</h2>
+        <p>
+          Les présentes CGV sont soumises au droit français.
+        </p>
+        <p>
+          En cas de litige, le client est invité à contacter en priorité notre service client pour trouver une solution amiable.
+        </p>
+        <p>
+          À défaut d'accord amiable, le client peut recourir à une médiation de la consommation auprès de :
+        </p>
+        <p>
+          <strong>Médiateur de la consommation compétent</strong><br />
+          [À compléter avec le médiateur de votre choix]
+        </p>
+        <p>
+          En dernier recours, les tribunaux français sont seuls compétents pour connaître de tout litige.
+        </p>
+
+        <div class="bg-primary-50 border-l-4 border-primary-600 p-6 my-8">
+          <p class="font-semibold mb-2">Dernière mise à jour : Janvier 2024</p>
+          <p class="text-sm">
+            {siteConfig.name} se réserve le droit de modifier les présentes CGV à tout moment.
+            Les CGV applicables sont celles en vigueur à la date de signature du devis.
+          </p>
+        </div>
+
+        <div class="text-center mt-12">
+          <a href="/contact" class="inline-flex items-center space-x-2 bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+            <span>Demander un devis</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
