@@ -1,7 +1,100 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import QuoteForm from '../components/QuoteForm.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 import { financingOptions } from '../data/content';
+
+const breadcrumbItems = [
+  { label: 'Accueil', href: '/' },
+  { label: 'Aides Financières' }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Puis-je cumuler MaPrimeRénov' et la Prime CEE ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, les aides sont cumulables ! Vous pouvez bénéficier simultanément de MaPrimeRénov', de la Prime CEE, de la TVA réduite à 5,5%, de l'Éco-PTZ et des aides locales. Le cumul peut représenter jusqu'à 50-60% du coût total de l'installation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien de temps pour recevoir MaPrimeRénov' ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le délai moyen de versement de MaPrimeRénov' est de 2 à 4 mois après la validation de votre dossier complet (factures et justificatifs envoyés). Certains dossiers simples peuvent être traités en 6 à 8 semaines."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quels documents faut-il fournir pour le dossier MaPrimeRénov' ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vous devrez fournir : avis d'imposition N-1, justificatif de propriété, devis détaillé signé de l'installateur RGE, attestation RGE, facture finale détaillée des travaux, certificat de conformité de l'installation, et RIB pour le virement des aides."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Que faire si ma demande MaPrimeRénov' est refusée ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En cas de refus, vous pouvez contester la décision sous 2 mois en apportant les pièces justificatives manquantes. Si le refus est définitif (revenus trop élevés), vous pouvez toujours bénéficier de la Prime CEE, de la TVA réduite et des aides locales."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Les locataires peuvent-ils bénéficier des aides pour un poêle à granulé ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non, les locataires ne peuvent pas demander MaPrimeRénov' directement. C'est le propriétaire bailleur qui doit faire la demande pour les travaux dans le logement loué."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Peut-on obtenir une avance sur MaPrimeRénov' ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, une avance de 70% du montant de l'aide peut être versée dès le début des travaux pour les ménages aux revenus très modestes et modestes. Le solde (30%) est versé après envoi de la facture finale."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Les revenus pris en compte pour MaPrimeRénov' sont-ils ceux de 2024 ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non. Pour une demande en 2024, ce sont les revenus de l'année N-1 qui comptent, c'est-à-dire le revenu fiscal de référence (RFR) 2023 qui correspond aux revenus perçus en 2022."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelle est l'erreur la plus fréquente qui fait perdre les aides ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "L'erreur la plus fréquente est de commencer les travaux avant l'accord MaPrimeRénov'. Vous DEVEZ déposer votre demande AVANT de signer le devis, sinon vous perdez l'aide."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Un installateur non RGE peut-il faire bénéficier des aides ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non. L'installateur DOIT être certifié RGE Qualibois. Sans cette certification, aucune aide financière ne sera accordée, même si vous êtes éligible selon vos revenus."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quel est le montant maximum des aides cumulées pour un poêle à granulé ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le montant maximum des aides cumulées peut atteindre 3 500€ en cumulant MaPrimeRénov' (jusqu'à 2 500€ pour ménages très modestes), Prime CEE (jusqu'à 800€) et l'économie liée à la TVA réduite à 5,5%."
+      }
+    }
+  ]
+};
 ---
 
 <BaseLayout
@@ -12,6 +105,8 @@ import { financingOptions } from '../data/content';
   <section class="py-20 bg-gradient-to-br from-green-50 to-blue-50">
     <div class="container mx-auto px-4">
       <div class="max-w-5xl mx-auto">
+        <Breadcrumb items={breadcrumbItems} />
+
         <div class="text-center mb-16">
           <div class="inline-flex items-center space-x-2 bg-green-100 text-green-800 px-4 py-2 rounded-full mb-6">
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -597,4 +692,6 @@ import { financingOptions } from '../data/content';
   </section>
 
   <QuoteForm />
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 </BaseLayout>

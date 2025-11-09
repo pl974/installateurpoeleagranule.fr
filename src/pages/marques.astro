@@ -1,7 +1,68 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import QuoteForm from '../components/QuoteForm.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 import { brands } from '../data/content';
+
+const breadcrumbItems = [
+  { label: 'Accueil', href: '/' },
+  { label: 'Marques' }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quelle est la meilleure marque de poêle à granulé ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rika est considérée comme la meilleure marque en termes de performance pure (rendement 95%+, silence). Cependant, MCZ et Palazzetti offrent un excellent rapport qualité-prix-design. Pour un budget serré, Extraflame ou Edilkamin sont d'excellents choix."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelle marque choisir pour un poêle silencieux ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rika (30-33 dB) et MCZ avec technologie No Air (32-35 dB) sont les plus silencieux du marché. MCZ No Air supprime même les ventilateurs grâce à la convection naturelle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Les marques italiennes sont-elles meilleures que les françaises ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "L'Italie domine le marché avec MCZ, Palazzetti, Extraflame et Edilkamin qui proposent les technologies les plus avancées. Invicta (France) offre des poêles robustes et fiables à prix attractifs, avec l'avantage d'un SAV de proximité. Le choix dépend de vos priorités : innovation (Italie) ou rapport qualité-prix + SAV local (France)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quel budget pour un bon poêle à granulé ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Comptez 3 500€ à 6 000€ installation comprise pour un poêle milieu de gamme de qualité (Extraflame, Palazzetti, Edilkamin). Avec les aides MaPrimeRénov' + CEE, le reste à charge est souvent de 2 500€ à 3 500€."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Toutes les marques donnent-elles accès aux aides financières ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, toutes les marques présentées (Rika, MCZ, Palazzetti, Extraflame, Edilkamin, Invicta) proposent des modèles éligibles aux aides avec rendement ≥ 87% et label Flamme Verte 7 étoiles. L'installation par un professionnel RGE Qualibois est obligatoire."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vaut-il mieux acheter en ligne ou via un installateur ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Passez toujours par un installateur RGE pour plusieurs raisons : prix négociés (souvent meilleurs qu'en ligne), installation conforme garantie, accès aux aides financières, garantie constructeur activée, formation à l'utilisation, et SAV assuré. L'achat seul en ligne vous fait perdre 2 500€ à 3 500€ d'aides."
+      }
+    }
+  ]
+};
 ---
 
 <BaseLayout
@@ -12,6 +73,8 @@ import { brands } from '../data/content';
   <section class="py-20 bg-gradient-to-br from-gray-50 to-white">
     <div class="container mx-auto px-4">
       <div class="max-w-6xl mx-auto">
+        <Breadcrumb items={breadcrumbItems} />
+
         <div class="text-center mb-16">
           <h1 class="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-6">
             Comparatif des Meilleures Marques de Poêles à Granulé
@@ -447,4 +510,6 @@ import { brands } from '../data/content';
   </section>
 
   <QuoteForm />
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 </BaseLayout>
