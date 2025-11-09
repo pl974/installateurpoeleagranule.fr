@@ -143,7 +143,7 @@ import { financingOptions } from '../data/content';
           </div>
         </div>
 
-        <div class="bg-white rounded-2xl shadow-soft-lg p-8">
+        <div class="bg-white rounded-2xl shadow-soft-lg p-8 mb-12">
           <h2 class="text-3xl font-bold text-gray-900 mb-6">Comment obtenir vos aides ?</h2>
           <div class="space-y-6">
             <div class="flex items-start space-x-4">
@@ -195,6 +195,401 @@ import { financingOptions } from '../data/content';
                 <p class="text-gray-600">Les aides sont versées directement sur votre compte bancaire après validation des travaux.</p>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-soft-lg p-8 mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">📊 Barèmes MaPrimeRénov' 2024</h2>
+          <p class="text-gray-600 mb-6">Le montant de MaPrimeRénov' varie selon vos revenus. Voici les plafonds de revenus (en €) et les montants d'aide correspondants :</p>
+
+          <div class="overflow-x-auto">
+            <table class="min-w-full border-collapse">
+              <thead>
+                <tr class="bg-gray-100">
+                  <th class="border border-gray-300 px-4 py-3 text-left font-semibold text-gray-900">Composition du foyer</th>
+                  <th class="border border-gray-300 px-4 py-3 text-center font-semibold text-primary-600">Très modestes</th>
+                  <th class="border border-gray-300 px-4 py-3 text-center font-semibold text-blue-600">Modestes</th>
+                  <th class="border border-gray-300 px-4 py-3 text-center font-semibold text-orange-600">Intermédiaires</th>
+                  <th class="border border-gray-300 px-4 py-3 text-center font-semibold text-gray-600">Supérieurs</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-3 font-semibold">1 personne (Île-de-France)</td>
+                  <td class="border border-gray-300 px-4 py-3 text-center">≤ 23 541 €</td>
+                  <td class="border border-gray-300 px-4 py-3 text-center">≤ 28 657 €</td>
+                  <td class="border border-gray-300 px-4 py-3 text-center">≤ 42 058 €</td>
+                  <td class="border border-gray-300 px-4 py-3 text-center">> 42 058 €</td>
+                </tr>
+                <tr class="bg-gray-50">
+                  <td class="border border-gray-300 px-4 py-3 font-semibold">1 personne (Autres régions)</td>
+                  <td class="border border-gray-300 px-4 py-3 text-center">≤ 17 009 €</td>
+                  <td class="border border-gray-300 px-4 py-3 text-center">≤ 21 805 €</td>
+                  <td class="border border-gray-300 px-4 py-3 text-center">≤ 30 549 €</td>
+                  <td class="border border-gray-300 px-4 py-3 text-center">> 30 549 €</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-3 font-semibold">2 personnes (Île-de-France)</td>
+                  <td class="border border-gray-300 px-4 py-3 text-center">≤ 34 551 €</td>
+                  <td class="border border-gray-300 px-4 py-3 text-center">≤ 42 058 €</td>
+                  <td class="border border-gray-300 px-4 py-3 text-center">≤ 61 760 €</td>
+                  <td class="border border-gray-300 px-4 py-3 text-center">> 61 760 €</td>
+                </tr>
+                <tr class="bg-gray-50">
+                  <td class="border border-gray-300 px-4 py-3 font-semibold">2 personnes (Autres régions)</td>
+                  <td class="border border-gray-300 px-4 py-3 text-center">≤ 24 875 €</td>
+                  <td class="border border-gray-300 px-4 py-3 text-center">≤ 31 889 €</td>
+                  <td class="border border-gray-300 px-4 py-3 text-center">≤ 44 907 €</td>
+                  <td class="border border-gray-300 px-4 py-3 text-center">> 44 907 €</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-3 font-semibold">4 personnes (Île-de-France)</td>
+                  <td class="border border-gray-300 px-4 py-3 text-center">≤ 56 611 €</td>
+                  <td class="border border-gray-300 px-4 py-3 text-center">≤ 68 847 €</td>
+                  <td class="border border-gray-300 px-4 py-3 text-center">≤ 101 171 €</td>
+                  <td class="border border-gray-300 px-4 py-3 text-center">> 101 171 €</td>
+                </tr>
+                <tr class="bg-gray-50">
+                  <td class="border border-gray-300 px-4 py-3 font-semibold">4 personnes (Autres régions)</td>
+                  <td class="border border-gray-300 px-4 py-3 text-center">≤ 40 596 €</td>
+                  <td class="border border-gray-300 px-4 py-3 text-center">≤ 52 085 €</td>
+                  <td class="border border-gray-300 px-4 py-3 text-center">≤ 73 558 €</td>
+                  <td class="border border-gray-300 px-4 py-3 text-center">> 73 558 €</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mt-6 bg-green-50 rounded-lg p-6">
+            <h3 class="font-bold text-green-900 mb-3">💰 Montants MaPrimeRénov' pour un poêle à granulé :</h3>
+            <div class="grid md:grid-cols-4 gap-4">
+              <div class="text-center">
+                <div class="text-2xl font-bold text-primary-600">2 500€</div>
+                <div class="text-sm text-gray-700">Très modestes</div>
+              </div>
+              <div class="text-center">
+                <div class="text-2xl font-bold text-blue-600">2 000€</div>
+                <div class="text-sm text-gray-700">Modestes</div>
+              </div>
+              <div class="text-center">
+                <div class="text-2xl font-bold text-orange-600">1 000€</div>
+                <div class="text-sm text-gray-700">Intermédiaires</div>
+              </div>
+              <div class="text-center">
+                <div class="text-2xl font-bold text-gray-600">0€</div>
+                <div class="text-sm text-gray-700">Supérieurs</div>
+              </div>
+            </div>
+          </div>
+
+          <p class="text-sm text-gray-500 mt-4">
+            <strong>Note :</strong> Les revenus pris en compte sont le revenu fiscal de référence (RFR) de l'année N-1.
+            Pour une demande en 2024, on prend en compte le RFR 2023 (revenus 2022).
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-soft-lg p-8 mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">⏱️ Délais de versement des aides</h2>
+          <div class="space-y-4">
+            <div class="flex items-start space-x-4 p-4 bg-blue-50 rounded-lg">
+              <div class="flex-shrink-0">
+                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-900 mb-1">MaPrimeRénov'</h3>
+                <p class="text-gray-700"><strong>2 à 4 mois</strong> après validation du dossier et des travaux</p>
+                <p class="text-sm text-gray-600 mt-1">Délai moyen constaté : 3 mois. Peut être plus rapide pour des dossiers simples.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4 p-4 bg-green-50 rounded-lg">
+              <div class="flex-shrink-0">
+                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-900 mb-1">Prime CEE</h3>
+                <p class="text-gray-700"><strong>1 à 3 mois</strong> après envoi des documents justificatifs</p>
+                <p class="text-sm text-gray-600 mt-1">Variable selon l'organisme (EDF, Engie, etc.). Certains proposent un versement sous 4 à 6 semaines.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4 p-4 bg-yellow-50 rounded-lg">
+              <div class="flex-shrink-0">
+                <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-900 mb-1">TVA réduite 5,5%</h3>
+                <p class="text-gray-700"><strong>Immédiat</strong> - Directement appliquée sur votre facture</p>
+                <p class="text-sm text-gray-600 mt-1">Aucune démarche, l'installateur RGE applique automatiquement le taux réduit.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4 p-4 bg-purple-50 rounded-lg">
+              <div class="flex-shrink-0">
+                <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-900 mb-1">Éco-PTZ</h3>
+                <p class="text-gray-700"><strong>3 à 6 semaines</strong> après acceptation du dossier par la banque</p>
+                <p class="text-sm text-gray-600 mt-1">Les fonds sont débloqués au fur et à mesure de l'avancement des travaux.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 p-4 bg-gray-50 rounded-lg border-l-4 border-gray-400">
+            <p class="text-sm text-gray-700">
+              <strong>💡 Conseil :</strong> Anticipez ces délais dans votre budget. Certains installateurs proposent des facilités de paiement
+              en attendant le versement des aides.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-red-50 rounded-2xl shadow-soft-lg p-8 mb-12">
+          <h2 class="text-3xl font-bold text-red-900 mb-6">🚫 Erreurs à éviter absolument</h2>
+          <div class="space-y-4">
+            <div class="flex items-start space-x-3">
+              <div class="flex-shrink-0">
+                <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-red-900 mb-1">Commencer les travaux avant l'accord MaPrimeRénov'</h3>
+                <p class="text-gray-700">Vous DEVEZ déposer votre demande MaPrimeRénov' AVANT de signer le devis. Si vous commencez les travaux avant, vous perdez l'aide !</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-3">
+              <div class="flex-shrink-0">
+                <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-red-900 mb-1">Choisir un installateur non certifié RGE</h3>
+                <p class="text-gray-700">L'installateur DOIT être certifié RGE Qualibois. Sans cette certification, aucune aide financière ne sera accordée, même si vous êtes éligible.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-3">
+              <div class="flex-shrink-0">
+                <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-red-900 mb-1">Oublier de vérifier les conditions du poêle</h3>
+                <p class="text-gray-700">Le poêle doit avoir un rendement ≥ 87% et des émissions de CO ≤ 1500 mg/Nm³. Vérifiez que le modèle choisi est éligible aux aides.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-3">
+              <div class="flex-shrink-0">
+                <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-red-900 mb-1">Ne pas conserver les factures et certificats</h3>
+                <p class="text-gray-700">Conservez TOUS les documents : devis, factures, attestation RGE, certificat de conformité. Vous en aurez besoin pour justifier les aides.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-3">
+              <div class="flex-shrink-0">
+                <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-red-900 mb-1">Négliger la Prime CEE</h3>
+                <p class="text-gray-700">La Prime CEE doit être demandée AVANT de signer le devis. Renseignez-vous auprès de votre fournisseur d'énergie ou d'autres obligés avant de vous engager.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-soft-lg p-8 mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8">❓ Questions fréquentes sur les aides financières</h2>
+
+          <div class="space-y-6">
+            <div class="border-l-4 border-primary-600 pl-6 py-2">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">1. Puis-je cumuler MaPrimeRénov' et la Prime CEE ?</h3>
+              <p class="text-gray-700">
+                <strong>Oui, les aides sont cumulables !</strong> Vous pouvez bénéficier simultanément de MaPrimeRénov', de la Prime CEE,
+                de la TVA réduite à 5,5%, de l'Éco-PTZ et des aides locales. C'est d'ailleurs fortement recommandé pour maximiser votre budget.
+                Le cumul peut représenter jusqu'à 50-60% du coût total de l'installation.
+              </p>
+            </div>
+
+            <div class="border-l-4 border-blue-600 pl-6 py-2">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">2. Combien de temps pour recevoir MaPrimeRénov' ?</h3>
+              <p class="text-gray-700">
+                Le délai moyen de versement de MaPrimeRénov' est de <strong>2 à 4 mois</strong> après la validation de votre dossier complet
+                (factures et justificatifs envoyés). Certains dossiers simples peuvent être traités en 6 à 8 semaines. Nous vous recommandons
+                de prévoir ces délais dans votre budget ou de demander un échelonnement de paiement à votre installateur.
+              </p>
+            </div>
+
+            <div class="border-l-4 border-green-600 pl-6 py-2">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">3. Quels documents faut-il fournir pour le dossier ?</h3>
+              <p class="text-gray-700 mb-2">
+                Pour constituer votre dossier MaPrimeRénov' et Prime CEE, vous devrez fournir :
+              </p>
+              <ul class="list-disc list-inside text-gray-700 space-y-1 ml-4">
+                <li>Avis d'imposition N-1 (revenu fiscal de référence)</li>
+                <li>Justificatif de propriété (acte notarié, taxe foncière)</li>
+                <li>Devis détaillé signé de l'installateur RGE</li>
+                <li>Attestation RGE de l'installateur (valide)</li>
+                <li>Facture finale détaillée des travaux</li>
+                <li>Certificat de conformité de l'installation</li>
+                <li>RIB pour le virement des aides</li>
+              </ul>
+              <p class="text-gray-700 mt-2">
+                Nos conseillers vous accompagnent dans la constitution de ce dossier pour éviter tout oubli.
+              </p>
+            </div>
+
+            <div class="border-l-4 border-yellow-600 pl-6 py-2">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">4. Que faire si ma demande MaPrimeRénov' est refusée ?</h3>
+              <p class="text-gray-700">
+                En cas de refus, l'Anah vous envoie un courrier précisant le motif (non-éligibilité, dossier incomplet, etc.).
+                Vous pouvez <strong>contester la décision sous 2 mois</strong> en apportant les pièces justificatives manquantes ou en
+                corrigeant les erreurs signalées. Si le refus est définitif (par exemple, revenus trop élevés), vous pouvez toujours
+                bénéficier de la Prime CEE, de la TVA réduite et des aides locales.
+              </p>
+            </div>
+
+            <div class="border-l-4 border-purple-600 pl-6 py-2">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">5. Ma situation change pendant les travaux, que faire ?</h3>
+              <p class="text-gray-700">
+                Si votre situation change (revenus, déménagement, modification du projet), vous devez <strong>prévenir immédiatement l'Anah</strong>
+                via votre compte MaPrimeRénov'. Un changement de revenus à la baisse peut vous faire basculer dans une catégorie supérieure d'aide.
+                En revanche, une augmentation de revenus ne modifie PAS le montant de l'aide déjà accordée, car c'est le revenu fiscal de référence
+                au moment de la demande qui compte.
+              </p>
+            </div>
+
+            <div class="border-l-4 border-red-600 pl-6 py-2">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">6. Les locataires peuvent-ils bénéficier des aides ?</h3>
+              <p class="text-gray-700">
+                <strong>Non, les locataires ne peuvent pas demander MaPrimeRénov' directement.</strong> C'est le propriétaire bailleur qui doit
+                faire la demande pour les travaux dans le logement loué. En revanche, si vous êtes locataire et que vous installez un poêle
+                démontable (avec accord du propriétaire), vous ne pourrez pas bénéficier des aides liées aux travaux de rénovation énergétique.
+              </p>
+            </div>
+
+            <div class="border-l-4 border-orange-600 pl-6 py-2">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">7. Poêle en copropriété : comment obtenir les aides ?</h3>
+              <p class="text-gray-700">
+                En copropriété, deux cas de figure :
+                <br /><br />
+                <strong>Installation individuelle dans votre appartement :</strong> Vous pouvez demander MaPrimeRénov' individuellement
+                si vous êtes propriétaire occupant. Attention : l'installation nécessite l'accord de la copropriété (vote en AG).
+                <br /><br />
+                <strong>Installation collective :</strong> La copropriété peut demander MaPrimeRénov' Copropriété pour un projet de chauffage
+                collectif aux granulés. Le montant peut atteindre 25% du montant des travaux HT (plafonné).
+              </p>
+            </div>
+
+            <div class="border-l-4 border-teal-600 pl-6 py-2">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">8. Les revenus pris en compte sont-ils ceux de 2024 ?</h3>
+              <p class="text-gray-700">
+                <strong>Non.</strong> Pour une demande en 2024, ce sont les revenus de l'année N-1 qui comptent, c'est-à-dire
+                le <strong>revenu fiscal de référence (RFR) 2023</strong> (qui correspond aux revenus perçus en 2022). Vous trouverez ce montant
+                sur votre avis d'imposition 2023. Si vous avez eu une forte baisse de revenus récemment, cela ne sera pris en compte que l'année suivante.
+              </p>
+            </div>
+
+            <div class="border-l-4 border-pink-600 pl-6 py-2">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">9. Peut-on obtenir une avance sur les aides ?</h3>
+              <p class="text-gray-700">
+                <strong>MaPrimeRénov' :</strong> Oui, une avance de 70% du montant de l'aide peut être versée dès le début des travaux
+                pour les ménages aux revenus très modestes et modestes. Le solde (30%) est versé après envoi de la facture finale.
+                <br /><br />
+                <strong>Prime CEE :</strong> Certains organismes proposent une avance ou un versement à la signature du devis, mais ce n'est pas systématique.
+                Renseignez-vous auprès de votre fournisseur d'énergie.
+                <br /><br />
+                <strong>Éco-PTZ :</strong> C'est un prêt à taux zéro, les fonds sont débloqués au fur et à mesure de l'avancement des travaux.
+              </p>
+            </div>
+
+            <div class="border-l-4 border-indigo-600 pl-6 py-2">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">10. MaPrimeRénov' et rénovation globale : quel intérêt ?</h3>
+              <p class="text-gray-700">
+                Si vous envisagez plusieurs travaux de rénovation énergétique (isolation, ventilation, chauffage), le dispositif
+                <strong>MaPrimeRénov' Parcours accompagné</strong> (ex-Rénovation globale) peut être plus avantageux. Il finance jusqu'à
+                <strong>90% du montant des travaux</strong> pour les ménages très modestes (80% pour les modestes), avec un plafond de 70 000€.
+                Un accompagnateur Mon Accompagnateur Rénov' (MAR) obligatoire vous aide à définir le meilleur scénario de rénovation.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl shadow-soft-lg p-8 mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">🔗 Ressources officielles</h2>
+          <p class="text-gray-700 mb-6">Pour aller plus loin et vérifier votre éligibilité en temps réel :</p>
+
+          <div class="grid md:grid-cols-2 gap-4">
+            <a href="https://www.maprimerenov.gouv.fr" target="_blank" rel="noopener noreferrer"
+               class="flex items-center space-x-3 bg-white rounded-lg p-4 hover:shadow-lg transition-shadow">
+              <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+              </svg>
+              <div>
+                <div class="font-bold text-gray-900">MaPrimeRénov.gouv.fr</div>
+                <div class="text-sm text-gray-600">Site officiel Anah</div>
+              </div>
+            </a>
+
+            <a href="https://france-renov.gouv.fr" target="_blank" rel="noopener noreferrer"
+               class="flex items-center space-x-3 bg-white rounded-lg p-4 hover:shadow-lg transition-shadow">
+              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+              </svg>
+              <div>
+                <div class="font-bold text-gray-900">France Rénov'</div>
+                <div class="text-sm text-gray-600">Service public de la rénovation</div>
+              </div>
+            </a>
+
+            <a href="https://www.ecologie.gouv.fr/prime-energie-certificats-economies-denergie" target="_blank" rel="noopener noreferrer"
+               class="flex items-center space-x-3 bg-white rounded-lg p-4 hover:shadow-lg transition-shadow">
+              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+              </svg>
+              <div>
+                <div class="font-bold text-gray-900">Prime CEE</div>
+                <div class="text-sm text-gray-600">Ministère de la Transition Écologique</div>
+              </div>
+            </a>
+
+            <a href="https://www.qualit-enr.org" target="_blank" rel="noopener noreferrer"
+               class="flex items-center space-x-3 bg-white rounded-lg p-4 hover:shadow-lg transition-shadow">
+              <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+              </svg>
+              <div>
+                <div class="font-bold text-gray-900">Qualit'EnR</div>
+                <div class="text-sm text-gray-600">Vérifier certification RGE</div>
+              </div>
+            </a>
+          </div>
+
+          <div class="mt-6 p-4 bg-white rounded-lg">
+            <p class="text-sm text-gray-700">
+              <strong>📞 Numéro France Rénov' :</strong> <span class="font-bold text-primary-600">0 808 800 700</span> (service gratuit + prix d'un appel)
+              <br />
+              Du lundi au vendredi de 9h à 18h - Conseillers spécialisés en rénovation énergétique
+            </p>
           </div>
         </div>
       </div>
